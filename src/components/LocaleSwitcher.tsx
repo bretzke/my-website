@@ -17,7 +17,9 @@ export default function LocaleSwitcher() {
 
   return (
     <div className="relative">
-      <Button onClick={handleOnClick}>{t("btnChange")}</Button>
+      <Button variant="default" onClick={handleOnClick}>
+        {t("btnChange")}
+      </Button>
     </div>
   );
 }
