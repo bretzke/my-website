@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
+import { getLocale, getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -19,14 +21,18 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [locale, messages] = await Promise.all([getLocale(), getMessages()]);
+
   return (
-    <html lang="en">
-      <body className={fontSans.variable}>{children}</body>
+    <html lang={locale}>
+      <NextIntlClientProvider messages={messages}>
+        <body className={fontSans.variable}>{children}</body>
+      </NextIntlClientProvider>
     </html>
   );
 }

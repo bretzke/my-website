@@ -1,0 +1,10 @@
+{
+    "index": {
+        "test": "Hello World!"
+    },
+    "LocaleSwitcher": {
+        "btnChange": "Change language",
+        "en": "English",
+        "pt": "Portuguese"
+    }
+}
