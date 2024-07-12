@@ -1,5 +1,5 @@
 import LocaleSwitcher from "@/components/LocaleSwitcher";
-import { Button } from "@/components/ui/button";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
       <h1>{t("test")}</h1>
 
       <LocaleSwitcher />
+      <ThemeSwitcher />
     </main>
   );
 }
