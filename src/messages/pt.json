@@ -1,10 +1,7 @@
 {
-    "index": {
-        "test": "Olá, Mundo!"
-    },
-    "LocaleSwitcher": {
-        "btnChange": "Trocar idioma",
-        "en": "Inglês",
-        "pt": "Português"
+    "settingsModal": {
+        "title": "Configurações",
+        "theme": "Tema",
+        "language": "Idioma"
     }
 }

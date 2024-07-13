@@ -11,8 +11,11 @@ import {
 } from "./ui/dialog";
 import { Button } from "./ui/button";
 import { Settings } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
+  const translate = useTranslations("settingsModal");
+
   return (
     <header className="flex justify-between items-center sticky top-0 z-10 p-2 backdrop-filter backdrop-blur">
       <Link href="/">LOGO</Link>
@@ -25,11 +28,11 @@ export default function Header() {
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Are you absolutely sure?</DialogTitle>
+            <DialogTitle>{translate("title")}</DialogTitle>
           </DialogHeader>
-          <div>
-            <LocaleSwitcher />
+          <div className="flex justify-around mt-2">
             <ThemeSwitcher />
+            <LocaleSwitcher />
           </div>
         </DialogContent>
       </Dialog>
