@@ -14,7 +14,7 @@ import { Settings } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center p-2">
+    <header className="flex justify-between items-center sticky top-0 z-10 p-2 backdrop-filter backdrop-blur">
       <Link href="/">LOGO</Link>
 
       <Dialog>
