@@ -31,8 +31,8 @@ export default function Header() {
             <DialogTitle>{translate("title")}</DialogTitle>
           </DialogHeader>
           <div className="flex justify-around mt-2">
-            <ThemeSwitcher />
             <LocaleSwitcher />
+            <ThemeSwitcher />
           </div>
         </DialogContent>
       </Dialog>

@@ -41,7 +41,7 @@ export default async function RootLayout({
             disableTransitionOnChange
           >
             <Header />
-            <main>{children}</main>
+            <main className="container">{children}</main>
           </ThemeProvider>
         </body>
       </NextIntlClientProvider>

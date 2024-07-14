@@ -1,3 +1,3 @@
 export default function Home() {
-  return <div>Index</div>;
+  return <div className="bg-secondary">Index</div>;
 }
