@@ -5,7 +5,15 @@ function returnHexColor(variableColor: string) {
 }
 
 export const shadcnPlugin = plugin(
-  function ({ addBase }) {
+  function ({ addBase, addUtilities }) {
+    const newUtilities = {
+      ".container-profile": {
+        padding: "0 6rem",
+      },
+    };
+
+    addUtilities(newUtilities);
+
     addBase({
       ":root": {
         "--background": "0 0% 100%",

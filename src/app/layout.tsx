@@ -5,6 +5,7 @@ import { getLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
+import ProfileHeader from "@/components/ProfileHeader";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -41,7 +42,12 @@ export default async function RootLayout({
             disableTransitionOnChange
           >
             <Header />
-            <main className="container">{children}</main>
+            <div className="container">
+              <main className=" bg-secondary">
+                <ProfileHeader />
+                {children}
+              </main>
+            </div>
           </ThemeProvider>
         </body>
       </NextIntlClientProvider>

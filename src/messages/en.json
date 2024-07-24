@@ -3,5 +3,9 @@
         "title": "Settings",
         "theme": "Theme",
         "language": "Language"
+    },
+    "profileHeader": {
+        "phrase": "Phrase",
+        "description": "Description"
     }
 }
