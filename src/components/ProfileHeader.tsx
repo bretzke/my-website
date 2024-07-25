@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Cake, CalendarFold, Link, MapPin } from "lucide-react";
 
 export default function ProfileHeader() {
   const translate = useTranslations("profileHeader");
@@ -15,13 +16,31 @@ export default function ProfileHeader() {
         </div>
       </div>
 
-      <div className="mx-36 flex flex-col gap-2 container-profile">
+      <div className="flex flex-col gap-4 container-profile">
         <div>
           <h2 className="text-2xl font-bold">Willian Bretzke</h2>
           <h3 className="text-lg font-semibold">{translate("phrase")}</h3>
+          <p>{translate("description")}</p>
         </div>
 
-        <p>{translate("description")}</p>
+        <div className="flex gap-4 flex-wrap mb-4">
+          <div className="flex gap-1">
+            <MapPin />
+            <p>SC, BR</p>
+          </div>
+          <div className="flex gap-1">
+            <Link />
+            <p>Links</p>
+          </div>
+          <div className="flex gap-1">
+            <Cake />
+            <p>{translate("birthDate")}</p>
+          </div>
+          <div className="flex gap-1">
+            <CalendarFold />
+            <p>{translate("joined")}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

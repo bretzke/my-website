@@ -6,6 +6,8 @@
     },
     "profileHeader": {
         "phrase": "Phrase",
-        "description": "Description"
+        "description": "Description",
+        "birthDate": "February 14, 2000",
+        "joined": "Joined August 2024"
     }
 }

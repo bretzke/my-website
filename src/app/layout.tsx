@@ -43,7 +43,7 @@ export default async function RootLayout({
           >
             <Header />
             <div className="container">
-              <main className=" bg-secondary">
+              <main className="bg-secondary">
                 <ProfileHeader />
                 {children}
               </main>

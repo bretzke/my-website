@@ -6,6 +6,8 @@
     },
     "profileHeader": {
         "phrase": "Frase",
-        "description": "Essa é uma descrição"
+        "description": "Essa é uma descrição",
+        "birthDate": "14/02/2000",
+        "joined": "Ingressou em agosto de 2024"
     }
 }
