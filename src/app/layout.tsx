@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import ProfileHeader from "@/components/ProfileHeader";
 import { TabsApp } from "@/components/TabsApp";
+import Footer from "@/components/Footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -49,6 +50,7 @@ export default async function RootLayout({
                 <TabsApp>{children}</TabsApp>
               </div>
             </div>
+            <Footer />
           </ThemeProvider>
         </body>
       </NextIntlClientProvider>
