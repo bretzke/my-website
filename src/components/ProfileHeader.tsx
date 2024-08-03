@@ -6,9 +6,9 @@ export default function ProfileHeader() {
   const translate = useTranslations("profileHeader");
 
   return (
-    <div>
+    <header>
       <div className="w-full h-96 flex items-center justify-center bg-red-400 mb-14">
-        <div className="relative container-profile h-full w-full">
+        <div className="relative container-app h-full w-full">
           <Avatar className="h-36 w-36 absolute -bottom-10 border-2 border-solid border-secondary">
             <AvatarImage src="/profile.jpg" />
             <AvatarFallback>WB</AvatarFallback>
@@ -16,7 +16,7 @@ export default function ProfileHeader() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 container-profile">
+      <div className="flex flex-col gap-4 container-app">
         <div>
           <h2 className="text-2xl font-bold">Willian Bretzke</h2>
           <h3 className="text-lg font-semibold">{translate("phrase")}</h3>
@@ -42,6 +42,6 @@ export default function ProfileHeader() {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

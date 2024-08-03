@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import ProfileHeader from "@/components/ProfileHeader";
+import { TabsApp } from "@/components/TabsApp";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -43,10 +44,10 @@ export default async function RootLayout({
           >
             <Header />
             <div className="container">
-              <main className="bg-secondary">
+              <div className="bg-secondary">
                 <ProfileHeader />
-                {children}
-              </main>
+                <TabsApp>{children}</TabsApp>
+              </div>
             </div>
           </ThemeProvider>
         </body>

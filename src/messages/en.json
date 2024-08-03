@@ -9,5 +9,9 @@
         "description": "Description",
         "birthDate": "February 14, 2000",
         "joined": "Joined August 2024"
+    },
+    "tabs": {
+        "posts": "Posts",
+        "about": "About"
     }
 }

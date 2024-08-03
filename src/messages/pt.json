@@ -9,5 +9,9 @@
         "description": "Essa é uma descrição",
         "birthDate": "14/02/2000",
         "joined": "Ingressou em agosto de 2024"
+    },
+    "tabs": {
+        "posts": "Publicações",
+        "about": "Sobre"
     }
 }
