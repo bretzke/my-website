@@ -7,7 +7,7 @@ export default function ProfileHeader() {
 
   return (
     <header>
-      <div className="w-full h-96 flex items-center justify-center bg-red-400 mb-14">
+      <div className="w-full h-96 flex items-center justify-center bg-[url('/background.jpg')] bg-center bg-cover bg-no-repeat background mb-14">
         <div className="relative container-app h-full w-full">
           <Avatar className="h-36 w-36 absolute -bottom-10 border-2 border-solid border-secondary">
             <AvatarImage src="/profile.jpg" />
