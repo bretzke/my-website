@@ -36,7 +36,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <NextIntlClientProvider messages={messages}>
-        <body className={fontSans.variable}>
+        <body className={`${fontSans.variable} min-w-80`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"

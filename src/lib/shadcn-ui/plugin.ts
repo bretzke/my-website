@@ -8,7 +8,19 @@ export const shadcnPlugin = plugin(
   function ({ addBase, addUtilities }) {
     const newUtilities = {
       ".container-app": {
-        padding: "0 6rem",
+        padding: "0 1rem",
+
+        "@screen sm": {
+          padding: "0 2rem",
+        },
+
+        "@screen md": {
+          padding: "0 4rem",
+        },
+
+        "@screen lg": {
+          padding: "0 6rem",
+        },
       },
     };
 
