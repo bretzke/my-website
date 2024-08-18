@@ -40,7 +40,8 @@ export function TabsApp({ children }: TabsAppProps) {
     },
   ] as MenuOptionProps[];
 
-  const currentPath = window.location.pathname;
+  const currentPath =
+    typeof window !== "undefined" ? window.location.pathname : "";
 
   return (
     <main>
