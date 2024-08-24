@@ -17,7 +17,7 @@ export default function Header() {
   const translate = useTranslations("settingsModal");
 
   return (
-    <header className="flex justify-between items-center sticky top-0 z-10 p-2 backdrop-filter backdrop-blur">
+    <header className="flex justify-between items-center sticky top-0 z-10 p-2 bg-header">
       <Link href="/">LOGO</Link>
 
       <Dialog>

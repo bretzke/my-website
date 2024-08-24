@@ -7,6 +7,10 @@ function returnHexColor(variableColor: string) {
 export const shadcnPlugin = plugin(
   function ({ addBase, addUtilities }) {
     const newUtilities = {
+      ".bg-header": {
+        background: "hsl(var(--background) / 65%)",
+      },
+
       ".container-app": {
         padding: "0 1rem",
 
