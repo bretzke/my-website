@@ -1,4 +1,8 @@
 {
+    "about": {
+        "title": "Saudações!",
+        "body": "Sou um profissional apaixonado pelo dinâmico mundo da Tecnologia da Informação, com mais de quatro anos de experiência nessa área. Minha jornada tem sido uma exploração do delicado equilíbrio entre inovação e praticidade, constantemente desafiando limites para descobrir soluções inovadoras.\n\nQuando se trata das minhas habilidades técnicas, possuo uma ampla gama de conhecimentos que impulsionaram minha trajetória. Tenho domínio em C#, React.js e sólida gestão de bancos de dados, integrando-os de maneira eficiente em soluções altamente escaláveis. Além disso, minha carreira inclui experiência na indústria de e-commerce, onde me destaquei como desenvolvedor back-end. Durante esse período, destaco minhas integrações bem-sucedidas com diversas plataformas de pagamento, incluindo a integração nativa com Pix, além de minhas contribuições para integrações com soluções de cálculo de frete.\n\nComplementando minha habilidade técnica, minhas habilidades interpessoais fundamentam minha abordagem profissional. Prospero em ambientes colaborativos, valorizando a arte de fornecer e receber feedback construtivo. Minhas habilidades de comunicação são refinadas, permitindo que eu transmita detalhes técnicos complexos para públicos diversos. Repleto de criatividade, estou sempre em busca de soluções inovadoras que desafiem normas convencionais, frequentemente provocando discussões instigantes que impulsionam o crescimento. Igualmente habilidoso sob pressão, vejo desafios como oportunidades de avanço, alimentando constantemente meu desejo de excelência."
+    },
     "settingsModal": {
         "title": "Configurações",
         "theme": "Tema",

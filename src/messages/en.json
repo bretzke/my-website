@@ -1,4 +1,8 @@
 {
+    "about": {
+        "title": "Greetings!",
+        "body": "I am a professional moved by the dynamic world of Information Technology, with more than four years of experience in this area. My journey has been an exploration of the delicate balance between innovation and practicality, continually pushing boundaries to discover innovative solutions.\n\nWhen it comes to my technical skills, I bring a diverse range of skills that have propelled my journey. I have a strong command of C#, React.js and robust database management, integrating them seamlessly into highly scalable solutions. Additionally, my career includes experience in the e-commerce industry, where I thrived as a back-end developer. During this period, I highlight my successful integrations with several payment platforms, including the native Pix integration, as well as my contributions to integrations with freight calculation solutions.\n\nComplementing my technical prowess, my interpersonal skills form the foundation of my professional approach. I thrive in collaborative environments, valuing the art of giving and receiving constructive feedback. My communication skills are fine-tuned, allowing me to convey intricate technical details to diverse audiences. Brimming with creativity, I'm always on the lookout for innovative solutions that challenge conventional norms, often sparking thought-provoking discussions that fuel growth. Equally adept at handling pressure, I see challenges as opportunities for advancement, consistently fueling my desire to excel."
+    },
     "settingsModal": {
         "title": "Settings",
         "theme": "Theme",
