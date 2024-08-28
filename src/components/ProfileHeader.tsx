@@ -1,6 +1,14 @@
 import { useTranslations } from "next-intl";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Cake, CalendarFold, Link, MapPin } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
+import { Button } from "./ui/button";
 
 export default function ProfileHeader() {
   const translate = useTranslations("profileHeader");
@@ -29,8 +37,23 @@ export default function ProfileHeader() {
             <p>SC, BR</p>
           </div>
           <div className="flex gap-1">
-            <Link />
-            <p>Links</p>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button
+                  variant="link"
+                  className="text-foreground p-0 h-auto gap-1"
+                >
+                  <Link />
+                  <p className="text-base">Links</p>
+                </Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Siga-me</DialogTitle>
+                </DialogHeader>
+                <div>{/* put social media links here! */}</div>
+              </DialogContent>
+            </Dialog>
           </div>
           <div className="flex gap-1">
             <Cake />
