@@ -18,7 +18,7 @@ export default function ProfileHeader() {
       <div className="w-full h-96 flex items-center justify-center bg-[url('/background.jpg')] bg-center bg-cover bg-no-repeat background mb-14">
         <div className="relative container-app h-full w-full">
           <Avatar className="h-36 w-36 absolute -bottom-10 border-2 border-solid border-secondary">
-            <AvatarImage src="/profile.jpg" />
+            <AvatarImage fetchPriority="high" src="/profile.jpg" />
             <AvatarFallback>WB</AvatarFallback>
           </Avatar>
         </div>

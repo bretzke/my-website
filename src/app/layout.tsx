@@ -11,7 +11,6 @@ import Footer from "@/components/Footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
-  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +35,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <NextIntlClientProvider messages={messages}>
-        <body className={`${fontSans.variable} min-w-80`}>
+        <body className={`${fontSans.className} min-w-80`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
@@ -57,3 +56,4 @@ export default async function RootLayout({
     </html>
   );
 }
+
