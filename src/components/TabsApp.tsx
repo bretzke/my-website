@@ -1,7 +1,7 @@
 "use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { ReactNode } from "react";
 
 interface TabsAppProps {
@@ -14,6 +14,7 @@ interface MenuOptionProps {
 }
 
 export function TabsApp({ children }: TabsAppProps) {
+  const currentPath = usePathname();
   const translate = useTranslations("tabs");
   const router = useRouter();
 
@@ -39,8 +40,6 @@ export function TabsApp({ children }: TabsAppProps) {
       path: "/projects",
     },
   ] as MenuOptionProps[];
-
-  const currentPath = window.location.pathname;
 
   return (
     <main>
