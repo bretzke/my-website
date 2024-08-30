@@ -32,10 +32,6 @@ export function TabsApp({ children }: TabsAppProps) {
       path: "/about",
     },
     {
-      label: translate("blog"),
-      path: "/blog",
-    },
-    {
       label: translate("projects"),
       path: "/projects",
     },
