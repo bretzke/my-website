@@ -27,6 +27,7 @@
   "tabs": {
     "posts": "Posts",
     "about": "About",
-    "projects": "Projects"
+    "projects": "Projects",
+    "feedback": "Feedback"
   }
 }
