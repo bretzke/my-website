@@ -7,9 +7,10 @@ export default function Home() {
   return (
     <section className="container-app">
       <FeedPost
-        title={translate("helloWorld.title")}
-        body={translate("helloWorld.body")}
+        postTitle={translate("helloWorld.title")}
+        postBody={translate("helloWorld.body")}
       />
     </section>
   );
 }
+
