@@ -42,31 +42,33 @@ export default function ExperiencePost({
         </div>
       </div>
 
-      {roles.map((role, index) => (
-        <div key={role.title} className="flex gap-4">
-          <div className="mt-2 flex flex-col items-center gap-1 min-w-14">
-            {roles.length > 1 && (
-              <div className="w-4 h-4 rounded-full bg-gray-500"></div>
-            )}
-
-            {index !== roles.length - 1 && (
-              <hr className="w-0.5 grow bg-gray-500" />
-            )}
-          </div>
-
-          <div>
-            <div>
-              <h3 className="text-xl font-bold">{role.title}</h3>
+      <div className="flex flex-col gap-6">
+        {roles.map((role, index) => (
+          <div key={role.title} className="flex gap-4">
+            <div className="mt-2 flex flex-col items-center gap-1 min-w-14">
               {roles.length > 1 && (
-                <h4 className="text-lg font-semibold">
-                  {role.startDate} - {role.endDate}
-                </h4>
+                <div className="w-4 h-4 rounded-full bg-gray-500"></div>
+              )}
+
+              {index !== roles.length - 1 && (
+                <hr className="w-0.5 grow bg-gray-500" />
               )}
             </div>
-            <div>{role.description}</div>
+
+            <div>
+              <div>
+                <h3 className="text-xl font-bold">{role.title}</h3>
+                {roles.length > 1 && (
+                  <h4 className="text-lg font-semibold">
+                    {role.startDate} - {role.endDate}
+                  </h4>
+                )}
+              </div>
+              <div>{role.description}</div>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

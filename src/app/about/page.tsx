@@ -4,6 +4,7 @@ import ExperiencePost, {
   ExperiencePostProps,
 } from "./components/ExperiencePost";
 import { ReactNode } from "react";
+import { companiesLogo } from "@/utils/constants";
 
 const convertTextToHTML = {
   item: (chunks: ReactNode) => <li>{chunks}</li>,
@@ -19,7 +20,7 @@ export default function About() {
   const experiences = [
     {
       company: translate("experiences.blip.company"),
-      logo: translate("experiences.blip.logo"),
+      logo: companiesLogo.blip,
       startDate: translate("experiences.blip.startDate"),
       endDate: translate("experiences.blip.endDate"),
       roles: [
@@ -36,7 +37,10 @@ export default function About() {
           title: translate("experiences.blip.roles.midLevel.title"),
           startDate: translate("experiences.blip.roles.midLevel.startDate"),
           endDate: translate("experiences.blip.roles.midLevel.endDate"),
-          description: translate("experiences.blip.roles.midLevel.description"),
+          description: translate.rich(
+            "experiences.blip.roles.midLevel.description",
+            convertTextToHTML
+          ),
         },
         {
           title: translate("experiences.blip.roles.chatbot.title"),
@@ -51,7 +55,7 @@ export default function About() {
     },
     {
       company: translate("experiences.adsomos.company"),
-      logo: translate("experiences.adsomos.logo"),
+      logo: companiesLogo.adsomos,
       startDate: translate("experiences.adsomos.startDate"),
       endDate: translate("experiences.adsomos.endDate"),
       roles: [
@@ -68,7 +72,7 @@ export default function About() {
     },
     {
       company: translate("experiences.litoralcar.company"),
-      logo: translate("experiences.litoralcar.logo"),
+      logo: companiesLogo.litoralcar,
       startDate: translate("experiences.litoralcar.startDate"),
       endDate: translate("experiences.litoralcar.endDate"),
       roles: [

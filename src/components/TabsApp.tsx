@@ -61,7 +61,7 @@ export function TabsApp({ children }: TabsAppProps) {
             ))}
           </TabsList>
         </div>
-        <div className="py-2">{children}</div>
+        <div className="py-4">{children}</div>
       </Tabs>
     </main>
   );

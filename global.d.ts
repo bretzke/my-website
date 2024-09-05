@@ -1,4 +1,3 @@
-type Messages = typeof import("@/messages/pt.json");
-type EnMessages = typeof import("@/messages/en.json");
+type Messages = typeof import("@/messages/pt")["default"];
 
-declare interface IntlMessages extends Messages, EnMessages {}
+declare interface IntlMessages extends Messages {}
