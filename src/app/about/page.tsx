@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import ExperiencePost, {
   ExperiencePostProps,
 } from "./components/ExperiencePost";
