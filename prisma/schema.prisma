@@ -3,14 +3,14 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model UserFeedback {
   id        String   @id
-  email     String
-  name      String
+  email     String   @db.VarChar(255)
+  name      String   @db.VarChar(255)
   imageUrl  String?
   message   String
   active    Boolean  @default(false)
