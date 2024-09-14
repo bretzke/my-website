@@ -25,8 +25,9 @@ import {
 import { useState } from "react";
 import { apiPaths } from "@/utils/constants";
 import { useToast } from "@/hooks/use-toast";
+import FeedPost from "@/components/FeedPost";
 
-export default function FeedbackForm() {
+function SheetForm() {
   const [open, setOpen] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const translate = useTranslations("feedbacks");
@@ -197,4 +198,9 @@ export default function FeedbackForm() {
       </Sheet>
     </div>
   );
+}
+
+export default function FeedbackForm() {
+  const translate = useTranslations("feedbacks");
+  return <FeedPost postBody={<SheetForm />} postTitle={translate("title")} />;
 }

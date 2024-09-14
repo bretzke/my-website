@@ -1,6 +1,8 @@
 import FeedPost from "@/components/FeedPost";
 import { useTranslations } from "next-intl";
 
+export const dynamic = "force-static";
+
 export default function Home() {
   const translate = useTranslations("posts");
 
@@ -13,4 +15,3 @@ export default function Home() {
     </section>
   );
 }
-
