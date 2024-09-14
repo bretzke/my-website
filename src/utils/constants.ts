@@ -11,3 +11,7 @@ export const projectsInfo = {
     site: "https://wb-shop-seven.vercel.app/",
   },
 };
+
+export const apiPaths = {
+  feedbacks: "/api/feedbacks",
+};

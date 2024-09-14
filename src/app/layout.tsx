@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import ProfileHeader from "@/components/ProfileHeader";
 import { TabsApp } from "@/components/TabsApp";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -51,9 +52,9 @@ export default async function RootLayout({
             </div>
             <Footer />
           </ThemeProvider>
+          <Toaster />
         </body>
       </NextIntlClientProvider>
     </html>
   );
 }
-

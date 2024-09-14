@@ -19,9 +19,9 @@ export async function POST(req: NextRequest) {
     data: {
       id: randomUUID(),
       name: body.name,
-      email: body.email,
-      message: body.message,
+      siteUrl: body.siteUrl,
       imageUrl: body.imageUrl,
+      message: body.message,
     },
   });
 
