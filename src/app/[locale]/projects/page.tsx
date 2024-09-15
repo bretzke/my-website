@@ -1,4 +1,3 @@
-"use client";
 import { ReactNode } from "react";
 import {
   Card,
@@ -7,19 +6,20 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { projectsInfo } from "@/utils/constants";
+import { projectsInfo, StaticPageProps } from "@/utils/constants";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { renderToString } from "react-dom/server";
+// import { renderToString } from "react-dom/server";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 const convertTextToHTML = {
   link: (chunks: ReactNode) => (
     <Link
       target="_blank"
       className="list-inside list-disc underline cursor-pointer"
-      href={renderToString(chunks)}
+      href="/chunks"
     >
       {chunks}
     </Link>
@@ -28,7 +28,8 @@ const convertTextToHTML = {
   br: () => <br />,
 };
 
-export default function Projects() {
+export default function Projects({ params: { locale } }: StaticPageProps) {
+  unstable_setRequestLocale(locale);
   const translate = useTranslations("projects");
   const projects = [
     {

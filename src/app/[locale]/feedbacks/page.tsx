@@ -2,17 +2,22 @@ import FeedPost from "@/components/FeedPost";
 import FeedbackForm from "./FeedbackForm";
 import prisma from "@/utils/db";
 import Divider from "@/components/Divider";
+import { StaticPageProps } from "@/utils/constants";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 // TODO
 // use this config when we had users feedback's
 // export const revalidate = 60;
 
-export default async function Feedbacks() {
+export default async function Feedbacks({
+  params: { locale },
+}: StaticPageProps) {
   const feedbacks = await prisma.userFeedback.findMany({
     where: {
       active: true,
     },
   });
+  unstable_setRequestLocale(locale);
 
   return (
     <section className="container-app flex flex-col gap-4">

@@ -1,8 +1,10 @@
 import FeedPost from "@/components/FeedPost";
-import { myUserInfo, publishedDate } from "@/utils/constants";
+import { myUserInfo, publishedDate, StaticPageProps } from "@/utils/constants";
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Home() {
+export default function Home({ params: { locale } }: StaticPageProps) {
+  unstable_setRequestLocale(locale);
   const translate = useTranslations("posts");
 
   return (

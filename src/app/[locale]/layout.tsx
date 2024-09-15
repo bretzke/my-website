@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
-import { getLocale, getMessages } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
@@ -9,6 +9,7 @@ import ProfileHeader from "@/components/ProfileHeader";
 import { TabsApp } from "@/components/TabsApp";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import { supportedLocales } from "@/i18n";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -25,6 +26,10 @@ export const metadata: Metadata = {
     },
   ],
 };
+
+export function generateStaticParams() {
+  return supportedLocales.map((locale) => ({ locale }));
+}
 
 export default async function RootLayout({
   children,

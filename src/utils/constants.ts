@@ -22,3 +22,9 @@ export const myUserInfo = {
 };
 
 export const publishedDate = new Date("2024-09-15 12:00:00");
+
+export interface StaticPageProps {
+  params: {
+    locale: string;
+  };
+}

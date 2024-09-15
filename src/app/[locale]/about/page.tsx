@@ -3,8 +3,9 @@ import ExperiencePost, {
   ExperiencePostProps,
 } from "./components/ExperiencePost";
 import { ReactNode } from "react";
-import { companiesLogo } from "@/utils/constants";
+import { companiesLogo, StaticPageProps } from "@/utils/constants";
 import Divider from "@/components/Divider";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 const convertTextToHTML = {
   item: (chunks: ReactNode) => <li>{chunks}</li>,
@@ -14,7 +15,9 @@ const convertTextToHTML = {
   br: () => <br />,
 };
 
-export default function About() {
+export default function About({ params: { locale } }: StaticPageProps) {
+  unstable_setRequestLocale(locale);
+
   const translate = useTranslations("about");
 
   const experiences = [
