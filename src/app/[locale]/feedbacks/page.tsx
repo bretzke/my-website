@@ -24,7 +24,7 @@ export default async function Feedbacks({
       <FeedbackForm />
 
       {feedbacks.map((feedback) => (
-        <>
+        <div key={feedback.id} className="flex flex-col gap-4">
           <Divider />
           <FeedPost
             key={feedback.id}
@@ -33,7 +33,7 @@ export default async function Feedbacks({
             user={{ name: feedback.name, avatarUrl: feedback.imageUrl }}
             postedAt={feedback.createdAt}
           />
-        </>
+        </div>
       ))}
     </section>
   );
