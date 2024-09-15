@@ -9,16 +9,17 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { Button } from "./ui/button";
+import { myUserInfo } from "@/utils/constants";
 
 export default function ProfileHeader() {
   const translate = useTranslations("profileHeader");
 
   return (
     <header>
-      <div className="w-full h-96 flex items-center justify-center bg-[url('/background.jpg')] bg-center bg-cover bg-no-repeat background mb-14">
+      <div className="w-full h-96 flex items-center justify-center bg-[url('/images/background.jpg')] bg-center bg-cover bg-no-repeat background mb-14">
         <div className="relative container-app h-full w-full">
           <Avatar className="h-36 w-36 absolute -bottom-10 border-2 border-solid border-secondary">
-            <AvatarImage fetchPriority="high" src="/profile.jpg" />
+            <AvatarImage fetchPriority="high" src={myUserInfo.avatarUrl} />
             <AvatarFallback>WB</AvatarFallback>
           </Avatar>
         </div>

@@ -2,8 +2,6 @@ import FeedPost from "@/components/FeedPost";
 import { myUserInfo, publishedDate } from "@/utils/constants";
 import { useTranslations } from "next-intl";
 
-export const dynamic = "force-static";
-
 export default function Home() {
   const translate = useTranslations("posts");
 

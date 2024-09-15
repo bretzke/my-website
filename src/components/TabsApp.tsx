@@ -1,5 +1,5 @@
 "use client";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { ReactNode } from "react";
@@ -13,8 +13,20 @@ interface MenuOptionProps {
   path: string;
 }
 
+function removeLocaleFromRoute(route: string) {
+  const supportedLocales = ["pt", "en"];
+
+  const parts = route.split("/").filter(Boolean);
+
+  if (supportedLocales.includes(parts[0])) {
+    return "/" + parts.slice(1).join("/");
+  }
+
+  return route;
+}
+
 export function TabsApp({ children }: TabsAppProps) {
-  const currentPath = usePathname();
+  const currentPath = removeLocaleFromRoute(usePathname());
   const translate = useTranslations("tabs");
   const router = useRouter();
 

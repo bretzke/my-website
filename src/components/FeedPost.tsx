@@ -1,7 +1,9 @@
 import { ReactNode } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import SeparatorCircle from "./SeparatorCircle";
+
 import { formatDate } from "@/utils/date";
+import { myUserInfo } from "@/utils/constants";
 
 interface PostUserProps {
   name: string;
@@ -25,7 +27,7 @@ export default function FeedPost({
     <article>
       <div className="flex gap-3">
         <Avatar className="h-12 w-12">
-          <AvatarImage src="/profile.jpg" />
+          <AvatarImage src={myUserInfo.avatarUrl} />
           <AvatarFallback>WB</AvatarFallback>
         </Avatar>
 

@@ -7,8 +7,6 @@ import Divider from "@/components/Divider";
 // use this config when we had users feedback's
 // export const revalidate = 60;
 
-export const dynamic = "force-static";
-
 export default async function Feedbacks() {
   const feedbacks = await prisma.userFeedback.findMany({
     where: {

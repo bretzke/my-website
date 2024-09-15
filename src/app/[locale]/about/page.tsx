@@ -14,8 +14,6 @@ const convertTextToHTML = {
   br: () => <br />,
 };
 
-export const dynamic = "force-static";
-
 export default function About() {
   const translate = useTranslations("about");
 
