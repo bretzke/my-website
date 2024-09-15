@@ -95,7 +95,7 @@ function SheetForm() {
         <SheetTrigger asChild>
           <Button>{translate("cta")}</Button>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent className="overflow-y-auto">
           <SheetHeader>
             <SheetTitle>{translate("formFeedback.title")}</SheetTitle>
             <SheetDescription>
@@ -208,6 +208,7 @@ export default function FeedbackForm() {
       postTitle={translate("title")}
       user={myUserInfo}
       postedAt={publishedDate}
+      pinned
     />
   );
 }

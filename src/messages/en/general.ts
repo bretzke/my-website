@@ -23,4 +23,5 @@ export default {
     projects: "Projects",
     feedbacks: "Feedbacks",
   },
+  pinned: "Pinned",
 } as const;

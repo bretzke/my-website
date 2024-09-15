@@ -4,6 +4,9 @@ import prisma from "@/utils/db";
 import Divider from "@/components/Divider";
 import { StaticPageProps } from "@/utils/constants";
 import { unstable_setRequestLocale } from "next-intl/server";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 // TODO
 // use this config when we had users feedback's
@@ -17,6 +20,7 @@ export default async function Feedbacks({
     where: {
       active: true,
     },
+    orderBy: [{ pinned: "desc" }, { createdAt: "asc" }],
   });
 
   return (
@@ -26,13 +30,23 @@ export default async function Feedbacks({
       {feedbacks.map((feedback) => (
         <div key={feedback.id} className="flex flex-col gap-4">
           <Divider />
-          <FeedPost
-            key={feedback.id}
-            postBody={feedback.message}
-            postTitle=""
-            user={{ name: feedback.name, avatarUrl: feedback.imageUrl }}
-            postedAt={feedback.createdAt}
-          />
+          <div className="flex justify-between">
+            <FeedPost
+              key={feedback.id}
+              postBody={feedback.message}
+              postTitle=""
+              user={{ name: feedback.name, avatarUrl: feedback.imageUrl }}
+              postedAt={feedback.createdAt}
+              pinned={feedback.pinned}
+            />
+            {!!feedback.siteUrl?.length && (
+              <Link href={feedback.siteUrl} target="_blank">
+                <Button variant="default">
+                  <SquareArrowOutUpRight size={16} />
+                </Button>
+              </Link>
+            )}
+          </div>
         </div>
       ))}
     </section>
