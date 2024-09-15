@@ -1,3 +1,5 @@
+export const defaultAvatarImage = "/images/default-avatar.png";
+
 export const companiesLogo = {
   blip: "/images/companies/blip.png",
   adsomos: "/images/companies/adsomos.jpeg",

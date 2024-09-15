@@ -15,7 +15,7 @@ export default {
         placeholder: "Enter a URL of your site/LinkedIn/GitHub",
       },
       avatarUrl: {
-        label: "Profile picture URL",
+        label: "Avatar URL",
         placeholder: "Enter the URL of your profile picture",
       },
       message: {

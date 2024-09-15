@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import Avatar from "./Avatar";
 import { Cake, CalendarFold, Link, MapPin } from "lucide-react";
 import {
   Dialog,
@@ -18,10 +18,14 @@ export default function ProfileHeader() {
     <header>
       <div className="w-full h-96 flex items-center justify-center bg-[url('/images/background.jpg')] bg-center bg-cover bg-no-repeat background mb-14">
         <div className="relative container-app h-full w-full">
-          <Avatar className="h-36 w-36 absolute -bottom-10 border-2 border-solid border-secondary">
-            <AvatarImage fetchPriority="high" src={myUserInfo.avatarUrl} />
-            <AvatarFallback>WB</AvatarFallback>
-          </Avatar>
+          <div className="absolute -bottom-10">
+            <Avatar
+              imageUrl={myUserInfo.avatarUrl}
+              alt={myUserInfo.name}
+              size="large"
+              hasBorder
+            />
+          </div>
         </div>
       </div>
 
