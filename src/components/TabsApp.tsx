@@ -36,7 +36,7 @@ export function TabsApp({ children }: TabsAppProps) {
       path: "/projects",
     },
     {
-      label: translate("feedback"),
+      label: translate("feedbacks"),
       path: "/feedbacks",
     },
   ] as MenuOptionProps[];

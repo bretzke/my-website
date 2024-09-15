@@ -4,6 +4,7 @@ import ExperiencePost, {
 } from "./components/ExperiencePost";
 import { ReactNode } from "react";
 import { companiesLogo } from "@/utils/constants";
+import Divider from "@/components/Divider";
 
 const convertTextToHTML = {
   item: (chunks: ReactNode) => <li>{chunks}</li>,
@@ -99,9 +100,7 @@ export default function About() {
       {experiences.map((experience, index) => (
         <div key={experience.company} className="flex flex-col gap-4">
           <ExperiencePost {...experience} />
-          {index !== experiences.length - 1 && (
-            <hr className="bg-gray-500 h-0.5" />
-          )}
+          {index !== experiences.length - 1 && <Divider />}
         </div>
       ))}
     </section>

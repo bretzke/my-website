@@ -1,6 +1,7 @@
 import FeedPost from "@/components/FeedPost";
 import FeedbackForm from "./FeedbackForm";
 import prisma from "@/utils/db";
+import Divider from "@/components/Divider";
 
 // TODO
 // use this config when we had users feedback's
@@ -16,11 +17,20 @@ export default async function Feedbacks() {
   });
 
   return (
-    <section className="container-app">
+    <section className="container-app flex flex-col gap-4">
       <FeedbackForm />
 
       {feedbacks.map((feedback) => (
-        <FeedPost key={feedback.id} postBody={feedback.message} postTitle="" />
+        <>
+          <Divider />
+          <FeedPost
+            key={feedback.id}
+            postBody={feedback.message}
+            postTitle=""
+            user={{ name: feedback.name, avatarUrl: feedback.imageUrl }}
+            postedAt={feedback.createdAt}
+          />
+        </>
       ))}
     </section>
   );

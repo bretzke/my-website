@@ -21,6 +21,6 @@ export default {
     posts: "Publicações",
     about: "Sobre",
     projects: "Projetos",
-    feedback: "Feedback",
+    feedbacks: "Feedbacks",
   },
 } as const;

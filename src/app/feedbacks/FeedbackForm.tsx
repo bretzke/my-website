@@ -23,7 +23,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { useState } from "react";
-import { apiPaths } from "@/utils/constants";
+import { apiPaths, myUserInfo, publishedDate } from "@/utils/constants";
 import { useToast } from "@/hooks/use-toast";
 import FeedPost from "@/components/FeedPost";
 
@@ -202,5 +202,12 @@ function SheetForm() {
 
 export default function FeedbackForm() {
   const translate = useTranslations("feedbacks");
-  return <FeedPost postBody={<SheetForm />} postTitle={translate("title")} />;
+  return (
+    <FeedPost
+      postBody={<SheetForm />}
+      postTitle={translate("title")}
+      user={myUserInfo}
+      postedAt={publishedDate}
+    />
+  );
 }
