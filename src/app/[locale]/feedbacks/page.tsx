@@ -12,12 +12,12 @@ import { unstable_setRequestLocale } from "next-intl/server";
 export default async function Feedbacks({
   params: { locale },
 }: StaticPageProps) {
+  unstable_setRequestLocale(locale);
   const feedbacks = await prisma.userFeedback.findMany({
     where: {
       active: true,
     },
   });
-  unstable_setRequestLocale(locale);
 
   return (
     <section className="container-app flex flex-col gap-4">

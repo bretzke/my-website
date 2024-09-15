@@ -1,8 +1,8 @@
 "use client";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
-import { ReactNode } from "react";
+import { ReactNode, useMemo } from "react";
 
 interface TabsAppProps {
   children: ReactNode;
@@ -13,20 +13,9 @@ interface MenuOptionProps {
   path: string;
 }
 
-function removeLocaleFromRoute(route: string) {
-  const supportedLocales = ["pt", "en"];
-
-  const parts = route.split("/").filter(Boolean);
-
-  if (supportedLocales.includes(parts[0])) {
-    return "/" + parts.slice(1).join("/");
-  }
-
-  return route;
-}
-
 export function TabsApp({ children }: TabsAppProps) {
-  const currentPath = removeLocaleFromRoute(usePathname());
+  const locale = useLocale();
+  const currentPath = usePathname();
   const translate = useTranslations("tabs");
   const router = useRouter();
 
@@ -34,24 +23,28 @@ export function TabsApp({ children }: TabsAppProps) {
     router.push(value);
   }
 
-  const menuOptions = [
-    {
-      label: translate("posts"),
-      path: "/",
-    },
-    {
-      label: translate("about"),
-      path: "/about",
-    },
-    {
-      label: translate("projects"),
-      path: "/projects",
-    },
-    {
-      label: translate("feedbacks"),
-      path: "/feedbacks",
-    },
-  ] as MenuOptionProps[];
+  const menuOptions = useMemo(
+    () =>
+      [
+        {
+          label: translate("posts"),
+          path: `/${locale}`,
+        },
+        {
+          label: translate("about"),
+          path: `/${locale}/about`,
+        },
+        {
+          label: translate("projects"),
+          path: `/${locale}/projects`,
+        },
+        {
+          label: translate("feedbacks"),
+          path: `/${locale}/feedbacks`,
+        },
+      ] as MenuOptionProps[],
+    [locale, translate]
+  );
 
   return (
     <main>
