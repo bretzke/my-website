@@ -48,7 +48,15 @@ export default function FeedPost({
             <h1 className="text-2xl font-bold">{postTitle}</h1>
           </div>
 
-          {typeof postBody === "string" ? <div>{postBody}</div> : postBody}
+          {typeof postBody === "string" ? (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: postBody.replace(/\n/g, "<br>"),
+              }}
+            />
+          ) : (
+            postBody
+          )}
         </div>
       </div>
     </article>
