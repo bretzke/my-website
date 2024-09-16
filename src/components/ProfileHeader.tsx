@@ -26,15 +26,7 @@ export default function ProfileHeader() {
 
   return (
     <header>
-      <div className="w-full h-96 flex items-center justify-center bg-center bg-cover bg-no-repeat background mb-14 relative">
-        <Image
-          src="/images/background.jpg"
-          fill
-          alt=""
-          quality={100}
-          priority
-          className="object-cover"
-        />
+      <div className="w-full h-96 flex items-center justify-center bg-[url('/images/background.jpg')] bg-center bg-cover bg-no-repeat background mb-14">
         <div className="relative container-app h-full w-full">
           <div className="absolute -bottom-10">
             <Avatar
