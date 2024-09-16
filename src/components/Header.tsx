@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { Handjet } from "next/font/google";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import {
@@ -14,12 +15,18 @@ import { Button } from "./ui/button";
 import { Settings } from "lucide-react";
 import { useTranslations } from "next-intl";
 
+const handjet = Handjet({
+  subsets: ["latin"],
+});
+
 export default function Header() {
   const translate = useTranslations("settingsModal");
 
   return (
     <header className="flex justify-between items-center sticky top-0 z-10 p-2 bg-header">
-      <Link href="/">LOGO</Link>
+      <Link href="/" className={handjet.className}>
+        <h1 className="text-4xl">{"<Bretzke>"}</h1>
+      </Link>
 
       <Dialog>
         <DialogTrigger asChild>

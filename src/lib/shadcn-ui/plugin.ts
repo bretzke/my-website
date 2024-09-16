@@ -92,8 +92,8 @@ export const shadcnPlugin = plugin(
         // margin: '0',
         center: true,
         padding: {
-          xs: "1rem",
-          sm: "1rem",
+          xs: "0rem",
+          sm: "0rem",
           md: "2rem",
           lg: "2rem",
           xl: "2rem",
