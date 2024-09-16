@@ -30,3 +30,19 @@ export interface StaticPageProps {
     locale: string;
   };
 }
+
+export const mySocialMedias = {
+  email: {
+    label: "Email",
+    link: "mailto:willian.bretzke@gmail.com",
+  },
+  github: {
+    link: "https://github.com/bretzke",
+    image: "/images/social-medias/github.svg",
+    label: "GitHub",
+  },
+  linkedin: {
+    link: "https://www.linkedin.com/in/willian-bretzke/",
+    label: "LinkedIn",
+  },
+};

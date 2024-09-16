@@ -18,8 +18,7 @@ export default function LocaleSwitcher() {
 
   return (
     <div className="relative flex flex-col gap-1 items-center">
-      <h4 className="font-semibold">{translate("language")}</h4>
-      <Link href={redirectTo} className="">
+      <Link href={redirectTo}>
         <Button variant="outline" className="p-0 h-16 w-16">
           <Image
             src={
@@ -33,6 +32,8 @@ export default function LocaleSwitcher() {
           />
         </Button>
       </Link>
+
+      <h4 className="font-semibold">{translate("language")}</h4>
     </div>
   );
 }

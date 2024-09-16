@@ -16,6 +16,7 @@ export default {
       "I am a professional moved by the dynamic world of Information Technology, with more than four years of experience in this area. My journey has been an exploration of the delicate balance between innovation and practicality, continually pushing boundaries to discover innovative solutions.",
     birthDate: "February 14, 2000",
     joined: "Joined August 2024",
+    followMe: "Follow me on social media!",
   },
   tabs: {
     posts: "Posts",

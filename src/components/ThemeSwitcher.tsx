@@ -18,8 +18,6 @@ export function ThemeSwitcher() {
 
   return (
     <div className="relative flex flex-col gap-1 items-center">
-      <h4 className="font-semibold">{translate("theme")}</h4>
-
       <Button
         onClick={handleOnClick}
         variant="outline"
@@ -27,6 +25,8 @@ export function ThemeSwitcher() {
       >
         {resolvedTheme === "dark" ? <Moon size={50} /> : <Sun size={50} />}
       </Button>
+
+      <h4 className="font-semibold">{translate("theme")}</h4>
     </div>
   );
 }

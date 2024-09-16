@@ -1,6 +1,13 @@
 import { useTranslations } from "next-intl";
 import Avatar from "./Avatar";
-import { Cake, CalendarFold, Link, MapPin } from "lucide-react";
+import {
+  Cake,
+  CalendarFold,
+  Link as LinkIcon,
+  Linkedin,
+  Mail,
+  MapPin,
+} from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -9,7 +16,9 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { Button } from "./ui/button";
-import { myUserInfo } from "@/utils/constants";
+import { mySocialMedias, myUserInfo } from "@/utils/constants";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function ProfileHeader() {
   const translate = useTranslations("profileHeader");
@@ -46,17 +55,54 @@ export default function ProfileHeader() {
               <DialogTrigger asChild>
                 <Button
                   variant="link"
-                  className="text-foreground p-0 h-auto gap-1"
+                  className="text-foreground p-0 h-auto gap-1 underline"
                 >
-                  <Link />
+                  <LinkIcon />
                   <p className="text-base">Links</p>
                 </Button>
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent className="min-w-96">
                 <DialogHeader>
-                  <DialogTitle>Siga-me</DialogTitle>
+                  <DialogTitle>{translate("followMe")}</DialogTitle>
                 </DialogHeader>
-                <div>{/* put social media links here! */}</div>
+                <div className="flex justify-around">
+                  <div className="flex flex-col items-center gap-1">
+                    <Link href={mySocialMedias.email.link}>
+                      <Button variant="outline" className="p-0 h-16 w-16">
+                        <Mail size={50} />
+                      </Button>
+                    </Link>
+                    <h4 className="font-semibold">
+                      {mySocialMedias.email.label}
+                    </h4>
+                  </div>
+                  <div className="flex flex-col items-center gap-1">
+                    <Link href={mySocialMedias.github.link} target="_blank">
+                      <Button variant="outline" className="p-0 h-16 w-16">
+                        <Image
+                          height={50}
+                          width={50}
+                          alt="GitHub"
+                          src={mySocialMedias.github.image}
+                          className="dark:invert"
+                        />
+                      </Button>
+                    </Link>
+                    <h4 className="font-semibold">
+                      {mySocialMedias.github.label}
+                    </h4>
+                  </div>
+                  <div className="flex flex-col items-center gap-1">
+                    <Link href={mySocialMedias.linkedin.link} target="_blank">
+                      <Button variant="outline" className="p-0 h-16 w-16">
+                        <Linkedin size={50} />
+                      </Button>
+                    </Link>
+                    <h4 className="font-semibold">
+                      {mySocialMedias.linkedin.label}
+                    </h4>
+                  </div>
+                </div>
               </DialogContent>
             </Dialog>
           </div>
