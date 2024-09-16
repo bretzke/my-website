@@ -4,7 +4,7 @@ import { NextRequest } from "next/server";
 export default async function middleware(request: NextRequest) {
   const handleI18nRouting = createMiddleware({
     locales: ["pt", "en"],
-    defaultLocale: "pt",
+    defaultLocale: "en",
   });
   const response = handleI18nRouting(request);
 

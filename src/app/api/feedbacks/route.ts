@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
       name: body.name,
       siteUrl: body.siteUrl,
       imageUrl: body.imageUrl,
-      message: body.message,
+      message: body.message.replace(/\n/g, "<br />"),
     },
   });
 

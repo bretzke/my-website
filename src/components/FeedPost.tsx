@@ -51,7 +51,7 @@ export default function FeedPost({
           {typeof postBody === "string" ? (
             <div
               dangerouslySetInnerHTML={{
-                __html: postBody.replace(/\n/g, "<br>"),
+                __html: postBody,
               }}
             />
           ) : (
