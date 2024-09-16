@@ -5,6 +5,7 @@ import { ThemeSwitcher } from "./ThemeSwitcher";
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -29,6 +30,7 @@ export default function Header() {
         <DialogContent>
           <DialogHeader>
             <DialogTitle>{translate("title")}</DialogTitle>
+            <DialogDescription />
           </DialogHeader>
           <div className="flex justify-around mt-2">
             <LocaleSwitcher />

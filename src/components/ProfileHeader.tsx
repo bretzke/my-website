@@ -11,6 +11,7 @@ import {
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -64,6 +65,7 @@ export default function ProfileHeader() {
               <DialogContent className="min-w-96">
                 <DialogHeader>
                   <DialogTitle>{translate("followMe")}</DialogTitle>
+                  <DialogDescription />
                 </DialogHeader>
                 <div className="flex justify-around">
                   <div className="flex flex-col items-center gap-1">
