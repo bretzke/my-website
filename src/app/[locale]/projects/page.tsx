@@ -15,11 +15,11 @@ import { Button } from "@/components/ui/button";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 const convertTextToHTML = {
-  link: (chunks: ReactNode) => (
+  stripedoc: (chunks: ReactNode) => (
     <Link
       target="_blank"
       className="list-inside list-disc underline cursor-pointer"
-      href="/chunks"
+      href="https://docs.stripe.com/testing"
     >
       {chunks}
     </Link>
