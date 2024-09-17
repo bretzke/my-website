@@ -4,12 +4,6 @@ export default {
     theme: "Theme",
     language: "Language",
   },
-  posts: {
-    helloWorld: {
-      title: "Hello World!",
-      body: "This is my website where I centralize my portfolio, share my experiences, and create (or at least try to create, or will create 😅) blog posts that may be relevant and help other developers.",
-    },
-  },
   profileHeader: {
     phrase: "Turning coffee into code since 2020!",
     description:

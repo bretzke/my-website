@@ -204,11 +204,12 @@ export default function FeedbackForm() {
   const translate = useTranslations("feedbacks");
   return (
     <FeedPost
-      postBody={<SheetForm />}
       postTitle={translate("title")}
       user={myUserInfo}
       postedAt={publishedDate}
       pinned
-    />
+    >
+      <SheetForm />
+    </FeedPost>
   );
 }

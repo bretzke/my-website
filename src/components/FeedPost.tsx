@@ -14,7 +14,8 @@ interface PostUserProps {
 
 interface FeedPostProps {
   postTitle: string;
-  postBody: string | ReactNode;
+  postBody?: string;
+  children?: ReactNode;
   user: PostUserProps;
   postedAt: any;
   pinned?: boolean;
@@ -22,10 +23,11 @@ interface FeedPostProps {
 
 export default function FeedPost({
   postTitle,
-  postBody,
+  postBody = "",
   postedAt,
   user,
   pinned = false,
+  children = undefined,
 }: FeedPostProps) {
   const translate = useTranslations();
   return (
@@ -51,15 +53,16 @@ export default function FeedPost({
             <h1 className="text-2xl font-bold">{postTitle}</h1>
           </div>
 
-          {typeof postBody === "string" ? (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: postBody,
-              }}
-            />
-          ) : (
-            postBody
-          )}
+          <div className="flex flex-col gap-3">
+            {postBody.length > 0 && (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: postBody,
+                }}
+              />
+            )}
+            {!!children && children}
+          </div>
         </div>
       </div>
     </article>

@@ -20,6 +20,10 @@ export const shadcnPlugin = plugin(
         background: "hsl(var(--background) / 65%)",
       },
 
+      ".container": {
+        "max-width": "1264px",
+      },
+
       ".container-app": {
         padding: "0 1rem",
 
@@ -98,7 +102,6 @@ export const shadcnPlugin = plugin(
     darkMode: ["class"],
     theme: {
       container: {
-        // margin: '0',
         center: true,
         padding: {
           xs: "0rem",

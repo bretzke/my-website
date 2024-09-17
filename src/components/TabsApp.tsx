@@ -59,7 +59,7 @@ export function TabsApp({ children }: TabsAppProps) {
               <TabsTrigger
                 key={option.path}
                 value={option.path}
-                className="grow"
+                className="grow max-sm:px-1 max-sm:py-3"
               >
                 {option.label}
               </TabsTrigger>

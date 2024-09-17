@@ -4,12 +4,6 @@ export default {
     theme: "Tema",
     language: "Idioma",
   },
-  posts: {
-    helloWorld: {
-      title: "Olá mundo!",
-      body: "Este é o meu website onde centralizo o meu portfólio, conto sobre minhas experiências e crio (ou pelo menos tento criar, ou criarei 😅) blog posts que possam ser relevantes e ajudar outros DEVs.",
-    },
-  },
   profileHeader: {
     phrase: "Transformando café em código desde 2020!",
     description:
