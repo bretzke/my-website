@@ -3,7 +3,6 @@ import { randomUUID } from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
-  console.log("TEST", req);
   const body = await req.json();
 
   await prisma.userFeedback.create({
