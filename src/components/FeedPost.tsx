@@ -1,10 +1,11 @@
+"use client";
 import { ReactNode } from "react";
 import SeparatorCircle from "./SeparatorCircle";
 
-import { formatDate } from "@/utils/date";
 import Avatar from "./Avatar";
 import { Pin } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useFormattedDate } from "@/hooks/use-formatted-date";
 
 interface PostUserProps {
   name: string;
@@ -43,7 +44,9 @@ export default function FeedPost({
             <div className="flex items-center gap-2">
               <h3 className="text-lg font-semibold">{user.name}</h3>
               <SeparatorCircle />
-              <small className="font-normal">{formatDate(postedAt)}</small>
+              <small className="font-normal">
+                {useFormattedDate(postedAt)}
+              </small>
             </div>
             <h1 className="text-2xl font-bold">{postTitle}</h1>
           </div>

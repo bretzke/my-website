@@ -1,3 +1,4 @@
+"use client";
 import { useTranslations } from "next-intl";
 import Avatar from "./Avatar";
 import {
@@ -17,9 +18,10 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { Button } from "./ui/button";
-import { mySocialMedias, myUserInfo } from "@/utils/constants";
+import { mySocialMedias, myUserInfo, publishedDate } from "@/utils/constants";
 import Link from "next/link";
 import Image from "next/image";
+import { useFormattedDate } from "@/hooks/use-formatted-date";
 
 export default function ProfileHeader() {
   const translate = useTranslations("profileHeader");
@@ -114,7 +116,10 @@ export default function ProfileHeader() {
           </div>
           <div className="flex gap-1">
             <CalendarFold />
-            <p>{translate("joined")}</p>
+            <p>
+              {translate("joined")}
+              {useFormattedDate(publishedDate, "long")}
+            </p>
           </div>
         </div>
       </div>
