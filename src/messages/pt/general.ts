@@ -11,9 +11,9 @@ export default {
     },
   },
   profileHeader: {
-    phrase: "Frase",
+    phrase: "Transformando café em código desde 2020!",
     description:
-      "Sou um profissional apaixonado pelo dinâmico mundo da Tecnologia da Informação, com mais de quatro anos de experiência nessa área. Minha jornada tem sido uma exploração do delicado equilíbrio entre inovação e praticidade, constantemente desafiando limites para descobrir soluções inovadoras.",
+      "Sou um desenvolvedor apaixonado por criar soluções inovadoras e funcionais para a web. Estou sempre em busca de desafios que possam transformar ideias em projetos reais e impactantes.",
     birthDate: "14/02/2000",
     joined: "Ingressou em ",
     followMe: "Siga-me nas redes sociais!",

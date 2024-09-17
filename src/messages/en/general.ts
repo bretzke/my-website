@@ -11,9 +11,9 @@ export default {
     },
   },
   profileHeader: {
-    phrase: "Phrase",
+    phrase: "Turning coffee into code since 2020!",
     description:
-      "I am a professional moved by the dynamic world of Information Technology, with more than four years of experience in this area. My journey has been an exploration of the delicate balance between innovation and practicality, continually pushing boundaries to discover innovative solutions.",
+      "I am a developer passionate about creating innovative and functional solutions for the web. I am always seeking challenges that can transform ideas into real and impactful projects.",
     birthDate: "February 14, 2000",
     joined: "Joined ",
     followMe: "Follow me on social media!",
