@@ -7,7 +7,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/api/:path*",
+        source: "/api/feedbacks",
         headers: [{ key: "Cross-Origin-Opener-Policy", value: "same-origin" }],
       },
     ];
