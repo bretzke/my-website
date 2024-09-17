@@ -59,10 +59,6 @@ export default function ProfileHeader() {
                   .typeString("mundo!")
                   .start();
               }}
-              options={{
-                wrapperClassName: "text-6xl",
-                // cursorClassName
-              }}
             />
           </div>
           <div className="absolute -bottom-10">
