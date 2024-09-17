@@ -22,14 +22,49 @@ import { mySocialMedias, myUserInfo, publishedDate } from "@/utils/constants";
 import Link from "next/link";
 import Image from "next/image";
 import { useFormattedDate } from "@/hooks/use-formatted-date";
+import Typewriter from "typewriter-effect";
+import { useParams } from "next/navigation";
 
 export default function ProfileHeader() {
+  const { locale } = useParams();
   const translate = useTranslations("profileHeader");
 
   return (
     <header>
-      <div className="w-full h-96 flex items-center justify-center bg-[url('/images/background.jpg')] bg-center bg-cover bg-no-repeat background mb-14">
-        <div className="relative container-app h-full w-full">
+      <div className="w-full h-96 flex items-center justify-center bg-black bg-center bg-cover bg-no-repeat background mb-14">
+        <div className="relative container-app h-full w-full text-xl">
+          <div className="m-auto w-full h-full flex items-center justify-center text-center text-white">
+            <Typewriter
+              onInit={(typewritter) => {
+                if (locale === "en") {
+                  typewritter
+                    .typeString("Welcome to my hello")
+                    .pauseFor(200)
+                    .deleteChars(5)
+                    .typeString("(oops, my mistake)")
+                    .pauseFor(200)
+                    .deleteChars(18)
+                    .typeString("world!")
+                    .start();
+                  return;
+                }
+
+                typewritter
+                  .typeString("Bem-vindo(a) ao meu olá ")
+                  .pauseFor(200)
+                  .deleteChars(4)
+                  .typeString("(ops, errei)")
+                  .pauseFor(200)
+                  .deleteChars(12)
+                  .typeString("mundo!")
+                  .start();
+              }}
+              options={{
+                wrapperClassName: "text-6xl",
+                // cursorClassName
+              }}
+            />
+          </div>
           <div className="absolute -bottom-10">
             <Avatar
               imageUrl={myUserInfo.avatarUrl}

@@ -7,6 +7,9 @@ function returnHexColor(variableColor: string) {
 export const shadcnPlugin = plugin(
   function ({ addBase, addUtilities }) {
     const newUtilities = {
+      ".Typewriter__cursor": {
+        "font-size": "40px",
+      },
       ".bg-header": {
         background: "hsl(var(--background) / 65%)",
       },
