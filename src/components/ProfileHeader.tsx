@@ -120,6 +120,7 @@ export default function ProfileHeader() {
                           alt="GitHub"
                           src={mySocialMedias.github.image}
                           className="dark:invert"
+                          priority
                         />
                       </Button>
                     </Link>
