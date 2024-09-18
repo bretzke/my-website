@@ -50,7 +50,9 @@ export default function FeedPost({
                 {useFormattedDate(postedAt)}
               </small>
             </div>
-            <h1 className="text-2xl font-bold">{postTitle}</h1>
+            {postTitle.length > 0 && (
+              <h1 className="text-2xl font-bold">{postTitle}</h1>
+            )}
           </div>
 
           <div className="flex flex-col gap-3">

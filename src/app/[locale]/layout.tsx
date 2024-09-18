@@ -10,6 +10,7 @@ import { TabsApp } from "@/components/TabsApp";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { supportedLocales } from "@/i18n";
+import GoogleAnalytics from "@/lib/GoogleAnalytics";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <GoogleAnalytics />
       <NextIntlClientProvider messages={messages}>
         <body className={`${fontSans.className} min-w-80`}>
           <ThemeProvider
