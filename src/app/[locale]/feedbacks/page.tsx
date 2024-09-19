@@ -41,7 +41,7 @@ export default async function Feedbacks({
             />
             {!!feedback.siteUrl?.length && (
               <Link href={feedback.siteUrl} target="_blank">
-                <Button variant="default">
+                <Button variant="outline">
                   <SquareArrowOutUpRight size={16} />
                 </Button>
               </Link>

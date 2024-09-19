@@ -35,7 +35,7 @@ export default function Avatar({
   return (
     <div
       className={`rounded-full relative overflow-hidden flex ${imageSize.div}${
-        hasBorder ? " border-2 border-solid border-secondary" : ""
+        hasBorder ? " border-2 border-solid border-secondary-foreground" : ""
       }`}
     >
       <Image
