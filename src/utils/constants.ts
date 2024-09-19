@@ -4,6 +4,7 @@ export const companiesLogo = {
   blip: "/images/companies/blip.png",
   adsomos: "/images/companies/adsomos.jpeg",
   litoralcar: "/images/companies/litoralcar.webp",
+  fam: "/images/companies/fam.png",
 };
 
 export const projectsInfo = {

@@ -104,6 +104,28 @@ export default function About({ params: { locale } }: StaticPageProps) {
           {index !== experiences.length - 1 && <Divider />}
         </div>
       ))}
+
+      <h1 className="font-bold text-3xl text-center">
+        {translate("education.title")}
+      </h1>
+
+      <ExperiencePost
+        logo={companiesLogo.fam}
+        company="Faculdade das Américas"
+        startDate={translate("education.fam.startDate")}
+        endDate={translate("education.fam.endDate")}
+        roles={[
+          {
+            title: translate("education.fam.course"),
+            description: translate.rich(
+              "education.fam.description",
+              convertTextToHTML
+            ),
+            startDate: "",
+            endDate: "",
+          },
+        ]}
+      />
     </section>
   );
 }

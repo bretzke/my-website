@@ -62,6 +62,7 @@ export const shadcnPlugin = plugin(
         "--destructive": "0 84.2% 60.2%",
         "--destructive-foreground": "0 0% 98%",
         "--border": "240 5.9% 90%",
+        "--line": "220, 9%, 46%",
         "--input": "240 5.9% 90%",
         "--ring": "346.8 77.2% 49.8%",
         "--radius": "0.5rem",
@@ -84,6 +85,7 @@ export const shadcnPlugin = plugin(
         "--destructive": "0 62.8% 30.6%",
         "--destructive-foreground": "0 85.7% 97.3%",
         "--border": "240 3.7% 15.9%",
+        "--line": "220, 9%, 46%",
         "--input": "240 3.7% 15.9%",
         "--ring": "346.8 77.2% 49.8%",
       },
@@ -115,6 +117,7 @@ export const shadcnPlugin = plugin(
       extend: {
         colors: {
           border: returnHexColor("border"),
+          line: returnHexColor("line"),
           input: returnHexColor("input"),
           ring: returnHexColor("ring"),
           background: returnHexColor("background"),

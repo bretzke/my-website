@@ -53,8 +53,8 @@ export function TabsApp({ children }: TabsAppProps) {
         onValueChange={handleTabChange}
         activationMode="manual"
       >
-        <div>
-          <TabsList className="w-full container-app bg-secondary flex">
+        <div className="container-app">
+          <TabsList className="w-full bg-secondary flex p-0">
             {menuOptions.map((option) => (
               <TabsTrigger
                 key={option.path}

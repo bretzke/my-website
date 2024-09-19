@@ -11,21 +11,21 @@ export default {
           startDate: "January 2024",
           endDate: "PRESENT",
           description:
-            "In my current experience, I am part of a team dedicated to developing an AI product that creates conversational experiences, helping users efficiently resolve their inquiries.<br></br><br></br>Some highlights of my experience include:<list><item>Conducted significant optimizations in the micro front-end project code, resulting in noticeable improvements in application loading and navigation;</item><item>Led and actively participated in the evolution of this product;</item><item>Conducted code reviews;</item><item>Delivered high-quality demands on time.</item></list>",
+            "<list><item>Conducted significant optimizations on the micro front-end, resulting in improvements in application loading from 20 seconds to 3 seconds or less;</item><item>Led and actively participated in the continuous evolution of the product;</item><item>Carried out detailed code reviews to ensure the quality and performance of the system;</item><item>Delivered demands with a high standard of quality within the established deadlines.</item></list>",
         },
         midLevel: {
           title: "Mid-level Software Engineer",
           startDate: "September 2022",
           endDate: "December 2023",
           description:
-            "As a software engineer, I have been part of a dedicated team focused on creating an intuitive tool designed to enhance conversation flows. Our commitment to delivering excellence is reinforced by our adherence to clean code standards and rigorous code reviews, ensuring we create robust and accurate software solutions.<br></br><br></br>In addition, my team was responsible for developing an application that was responsible for processing all messages on the platform, managing a large database table. Notably, this application efficiently handles an impressive volume of over 50 million reads per hour, demonstrating our ability to manage substantial data loads while maintaining optimal performance.",
+            "<list><item>I made continuous improvements to an application that was already processing more than 50 million database read and write operations per hour;</item><item>Used Redis to improve the application's performance;</item><item>Used Grafana for observability and monitoring of the back-end application;</item><item>I carried out load tests to validate improvements from one release to the next.</item></list>",
         },
         chatbot: {
           title: "Chatbot Developer",
           startDate: "December 2021",
           endDate: "August 2022",
           description:
-            "As a Chatbot Developer, I have been accountable for crafting intuitive and efficient conversational flows for messaging channels using the Blip Builder tool.<br></br><br></br>My key responsibilities encompassed:<list><item>Crafting conversational flows;</item><item>Script development in Javascript;</item><item>Executing chatbot and API deployments;</item><item>Ongoing code review and enhancement.</item></list>",
+            "<list><item>Created conversation flows using a low code tool;</item><item>Developed Javascript scripts for the flow;</item><item>I integrated APIs in C# to connect to the low code tool;</item><item>Implemented chatbots and APIs.</item></list>",
         },
       },
     },
@@ -37,7 +37,7 @@ export default {
         backend: {
           title: "Back-end Developer",
           description:
-            "In this experience, I had the opportunity to work on the back-end of an e-commerce application used by other clients of the company. Some of my main responsibilities included:<list><item>Using APIs to integrate marketplaces, payment platforms, ERPs, and other systems;</item><item>Creating new features tailored to the client’s requirements;</item><item>Maintaining the code to ensure the proper functioning of the website.</item></list>",
+            "<list><item>I developed an asynchronous freight calculation logic in JavaScript that reduced the processing time from 15-20 seconds to 3 seconds or less;</item><item>I eliminated the manual deployment process and standardized automatic deployment using a GitLab trigger tool;</item><item>Made integrations with marketplaces, payment platforms, carriers and ERPs;</item><item>I integrated with PIX using the Central Bank manual.</item></list>",
         },
       },
     },
@@ -49,9 +49,19 @@ export default {
         web: {
           title: "Web Developer",
           description:
-            "As a web developer, I was responsible for creating custom websites for clients in the car resale industry, using technologies such as HTML, CSS, JavaScript, jQuery, Bootstrap, PHP, and MySQL.<br></br>In this role, I focused more on front-end development, prioritizing the creation of responsive and functional layouts",
+            "<list><item>Developed responsive websites with Bootstrap;</item><item>Delivered on client demands within the stipulated timeframe;</item><item>Improved my knowledge of MySQL databases and PHP.</item></list>",
         },
       },
+    },
+  },
+  education: {
+    title: "Academic background",
+    fam: {
+      course: "Bachelor's degree in Information Systems.",
+      description:
+        "<list><item>Programming Fundamentals;</item><item>Web Development;</item><item>Databases;</item><item>Artificial Intelligence;</item><item>Software Engineering;</item><item>Others.</item></list>",
+      startDate: "Março 2020",
+      endDate: "Junho 2024",
     },
   },
 } as const;

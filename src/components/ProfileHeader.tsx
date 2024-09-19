@@ -31,7 +31,7 @@ export default function ProfileHeader() {
 
   return (
     <header>
-      <div className="w-full h-96 flex items-center justify-center bg-black bg-center bg-cover bg-no-repeat background mb-14">
+      <div className="w-full h-96 flex items-center justify-center bg-black bg-center bg-cover bg-no-repeat background mb-14 border-b border-b-line">
         <div className="relative container-app h-full w-full text-xl">
           <div className="m-auto w-full h-full flex items-center justify-center text-center text-white">
             <Typewriter

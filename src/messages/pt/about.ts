@@ -11,21 +11,21 @@ export default {
           startDate: "Janeiro 2024",
           endDate: "PRESENTE",
           description:
-            "Na minha experiência atual, faço parte de uma equipe dedicada ao desenvolvimento de um produto de IA que cria experiências conversacionais, facilitando aos usuários resolver suas dúvidas de maneira eficaz.<br></br><br></br>Alguns dos principais destaques dessa minha jornada incluem:<list><item>Conduzi otimizações significativas no código do projeto de micro front-end, resultando em melhorias notáveis no carregamento e na navegação da aplicação;</item><item>Liderei e participei ativamente da evolução contínua deste produto;</item><item>Realizei revisões de código detalhadas para garantir a qualidade e o desempenho do sistema;</item><item>Entreguei demandas com alto padrão de qualidade dentro dos prazos estabelecidos.</item></list>",
+            "<list><item>Conduzi otimizações significativas no micro front-end, resultando em melhorias no carregamento da aplicação de 20 segundos para 3 segundos;</item><item>Liderei e participei ativamente da evolução contínua do produto;</item><item>Realizei revisões de código detalhadas para garantir a qualidade e o desempenho do sistema;</item><item>Entreguei demandas com alto padrão de qualidade dentro dos prazos estabelecidos.</item></list>",
         },
         midLevel: {
           title: "Engenheiro de software pleno",
           startDate: "Setembro 2022",
           endDate: "Dezembro 2023",
           description:
-            "Como engenheiro de software, fiz parte de uma equipe dedicada à evolução de uma ferramenta intuitiva projetada para aprimorar fluxos de conversação. Além disso, éramos responsáveis pelo desenvolvimento de um aplicativo que processa todas as mensagens na plataforma, gerenciando uma extensa tabela de banco de dados. Notavelmente, esse aplicativo lida de maneira eficiente com um volume impressionante de mais de 50 milhões de leituras por hora, demonstrando nossa capacidade de gerenciar cargas substanciais de dados mantendo um ótimo desempenho.",
+            "<list><item>Realizei melhorias contínuas em uma aplicação que já processava mais de 50 milhões de operações de leitura e escrita no banco de dados por hora;</item><item>Utilizei Redis para melhorar a performance da aplicação;</item><item>Utilizei Grafana para observabilidade e monitoramento da aplicação back-end;</item><item>Realizei testes de carga para validar melhorias de uma release para outra.</item></list>",
         },
         chatbot: {
           title: "Desenvolvedor de chatbot",
           startDate: "Dezembro 2021",
           endDate: "Agosto 2022",
           description:
-            "Como desenvolvedor de chatbots, fui responsável por criar fluxos de conversação intuitivos e eficientes para canais de mensagens utilizando a ferramenta Builder da Blip.<br></br><br></br>Minhas principais responsabilidades incluíam:<list><item>Criar fluxos de conversação;</item><item>Desenvolver scripts em Javascript</item><item>Integrar APIs em C# para conexão com o Builder;</item><item>Realizar implantações de chatbots e APIs;</item><item>Revisar e aprimorar continuamente o código.</item></list>",
+            "<list><item>Criei fluxos de conversação utilizando uma ferramenta low code;</item><item>Desenvolvi scripts em Javascript para o fluxo;</item><item>Integrei APIs em C# para conexão com a ferramenta low code;</item><item>Realizei implantações de chatbots e APIs.</item></list>",
         },
       },
     },
@@ -37,7 +37,7 @@ export default {
         backend: {
           title: "Desenvolvedor back-end",
           description:
-            "Nessa experiência, tive a oportunidade de atuar no back-end de uma aplicação de e-commerce, utilizada por outros clientes da empresa. Algumas das minhas principais responsabilidades incluíam:<list><item>Utilização de APIs para integrar marketplaces, plataformas de pagamento, ERPs e outros sistemas;</item><item>Criação de novas funcionalidades sob medida para os requisitos do cliente;</item><item>Manutenção do código para garantir o funcionamento adequado do website;</item><item>Integração com o PIX.</item></list>",
+            "<list><item>Desenvolvi uma lógica de cálculo de frete assíncrona em JavaScript que reduziu o tempo de processamento de 15-20 segundos para 3 segundos ou menos;</item><item>Eliminei o processo de deploy manual e padronizei o deploy automático utilizando uma ferramenta de gatilho do GitLab;</item><item>Realizei integrações com marketplaces, plataformas de pagamento, transportadoras e ERPs;</item><item>Realizei integração com o PIX utilizando o manual do Banco Central.</item></list>",
         },
       },
     },
@@ -49,9 +49,19 @@ export default {
         web: {
           title: "Desenvolvedor web",
           description:
-            "Como desenvolvedor web, estive responsável pela criação de websites personalizados para clientes da indústria de revenda de carros, utilizando tecnologias como HTML, CSS, JavaScript, jQuery, Bootstrap, PHP e MySQL.<br></br>Nessa oportunidade tive um foco maior no front-end, priorizando o desenvolvimento de layouts responsivos e funcionais.",
+            "<list><item>Desenvolvi sites responsivos com Bootstrap;</item><item>Realizei entregas sobre demandas dos clientes dentro do prazo estipulado;</item><item>Aprimorei o conhecimento em banco de dados MySQL e PHP.</item></list>",
         },
       },
+    },
+  },
+  education: {
+    title: "Formação acadêmica",
+    fam: {
+      course: "Graduado em sistemas de informação",
+      description:
+        "<list><item>Fundamentos da programação;</item><item>Desenvolvimento web;</item><item>Banco de dados;</item><item>Inteligência artifical;</item><item>Engenharia de software;</item><item>Outros.</item></list>",
+      startDate: "Março 2020",
+      endDate: "Junho 2024",
     },
   },
 } as const;
