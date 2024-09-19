@@ -22,10 +22,9 @@ export default function Avatar({
 
   const imageSize =
     size === "small"
-      ? { div: "min-h-12 h-12 min-w-12 w-12", image: { width: 48, height: 48 } }
+      ? { div: "min-h-12 h-12 min-w-12 w-12" }
       : {
           div: "min-h-36 h-36 min-w-36 w-36",
-          image: { width: 144, height: 144 },
         };
 
   const handleOnError = () => {
@@ -42,9 +41,8 @@ export default function Avatar({
         src={imgSrc}
         alt={alt}
         onError={handleOnError}
-        className=" border-none"
         quality={100}
-        {...imageSize.image}
+        fill
       />
     </div>
   );
