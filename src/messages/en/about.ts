@@ -60,8 +60,8 @@ export default {
       course: "Bachelor's degree in Information Systems.",
       description:
         "<list><item>Programming Fundamentals;</item><item>Web Development;</item><item>Databases;</item><item>Artificial Intelligence;</item><item>Software Engineering;</item><item>Others.</item></list>",
-      startDate: "Março 2020",
-      endDate: "Junho 2024",
+      startDate: "March 2020",
+      endDate: "June 2024",
     },
   },
 } as const;
