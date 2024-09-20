@@ -1,3 +1,4 @@
+import Divider from "@/components/Divider";
 import FeedPost from "@/components/FeedPost";
 import { myUserInfo, publishedDate, StaticPageProps } from "@/utils/constants";
 import { imagesPostPath } from "@/utils/imagesPath";
@@ -10,7 +11,7 @@ export default function Home({ params: { locale } }: StaticPageProps) {
   const translate = useTranslations("posts");
 
   return (
-    <section className="container-app">
+    <section className="container-app flex flex-col gap-4">
       <FeedPost
         postTitle={translate("helloWorld.title")}
         postBody={translate("helloWorld.body")}
@@ -23,6 +24,36 @@ export default function Home({ params: { locale } }: StaticPageProps) {
           alt=""
           width={1000}
           height={1000}
+          priority
+        />
+      </FeedPost>
+      <Divider />
+      <FeedPost
+        postTitle={translate("soonTheBlog.title")}
+        postBody={translate("soonTheBlog.body")}
+        user={myUserInfo}
+        postedAt={publishedDate}
+      >
+        <Image
+          src={imagesPostPath.soonTheBlog}
+          alt=""
+          width={500}
+          height={500}
+          priority
+        />
+      </FeedPost>
+      <Divider />
+      <FeedPost
+        postTitle={translate("theIdea.title")}
+        postBody={translate("theIdea.body")}
+        user={myUserInfo}
+        postedAt={publishedDate}
+      >
+        <Image
+          src={imagesPostPath.theIdea}
+          alt=""
+          width={500}
+          height={500}
           priority
         />
       </FeedPost>
