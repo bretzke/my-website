@@ -22,6 +22,8 @@ export function generateStaticParams() {
   return supportedLocales.map((locale) => ({ locale }));
 }
 
+export const runtime = "edge";
+
 export async function generateMetadata({
   params: { locale },
 }: StaticPageProps) {

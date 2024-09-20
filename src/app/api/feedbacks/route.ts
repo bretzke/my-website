@@ -1,13 +1,15 @@
 import prisma from "@/utils/db";
-import { randomUUID } from "node:crypto";
+import { v4 as uuidv4 } from "uuid";
 import { NextRequest, NextResponse } from "next/server";
+
+export const runtime = "edge";
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
 
   await prisma.userFeedback.create({
     data: {
-      id: randomUUID(),
+      id: uuidv4(),
       name: body.name,
       siteUrl: body.siteUrl,
       imageUrl: body.imageUrl,
