@@ -49,7 +49,7 @@ export default {
         web: {
           title: "Web Developer",
           description:
-            "<list><item>Developed responsive websites with Bootstrap;</item><item>Delivered on client demands within the stipulated timeframe;</item><item>Improved my knowledge of MySQL databases and PHP.</item></list>",
+            "<list><item>Developed responsive websites with Bootstrap;</item><item>Delivered on client demands within the stipulated timeframe;</item><item>I maintained legacy websites with versions prior to HTML5.</item></list>",
         },
       },
     },

@@ -13,6 +13,9 @@ export const projectsInfo = {
     repo: "https://github.com/bretzke/wb-shop",
     site: "https://wb-shop-seven.vercel.app/",
   },
+  myWebsite: {
+    logo: "/images/projects/my-website.png",
+  },
 };
 
 export const apiPaths = {

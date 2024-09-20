@@ -9,7 +9,6 @@ import {
 import { projectsInfo, StaticPageProps } from "@/utils/constants";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-// import { renderToString } from "react-dom/server";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { unstable_setRequestLocale } from "next-intl/server";
@@ -39,10 +38,17 @@ export default function Projects({ params: { locale } }: StaticPageProps) {
       repo: projectsInfo.wbShop.repo,
       site: projectsInfo.wbShop.site,
     },
+    {
+      title: translate("myWebsite.title"),
+      description: translate("myWebsite.description"),
+      bgImage: projectsInfo.myWebsite.logo,
+      site: "",
+      repo: "",
+    },
   ];
 
   return (
-    <section className="container-app">
+    <section className="container-app flex flex-col gap-4">
       {projects.map((project) => (
         <Card key={project.title} className="flex flex-col grow">
           <CardHeader className="relative grow">
@@ -58,14 +64,16 @@ export default function Projects({ params: { locale } }: StaticPageProps) {
             <CardTitle>{project.title}</CardTitle>
             <div>{project.description}</div>
           </CardContent>
-          <CardFooter className="flex justify-end gap-2">
-            <Link href={project.site} target="_blank">
-              <Button variant="outline">Site</Button>
-            </Link>
-            <Link href={project.repo} target="_blank">
-              <Button variant="outline">Repositório</Button>
-            </Link>
-          </CardFooter>
+          {project.site?.length > 0 && project.repo?.length > 0 && (
+            <CardFooter className="flex justify-end gap-2">
+              <Link href={project.site} target="_blank">
+                <Button variant="outline">Site</Button>
+              </Link>
+              <Link href={project.repo} target="_blank">
+                <Button variant="outline">Repositório</Button>
+              </Link>
+            </CardFooter>
+          )}
         </Card>
       ))}
     </section>

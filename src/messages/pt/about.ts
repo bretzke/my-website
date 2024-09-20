@@ -49,7 +49,7 @@ export default {
         web: {
           title: "Desenvolvedor web",
           description:
-            "<list><item>Desenvolvi sites responsivos com Bootstrap;</item><item>Realizei entregas sobre demandas dos clientes dentro do prazo estipulado;</item><item>Aprimorei o conhecimento em banco de dados MySQL e PHP.</item></list>",
+            "<list><item>Desenvolvi sites responsivos com Bootstrap;</item><item>Realizei entregas sobre demandas dos clientes dentro do prazo estipulado;</item><item>Dei manutenção a sites legados com versões anteriores ao HTML 5.</item></list>",
         },
       },
     },
