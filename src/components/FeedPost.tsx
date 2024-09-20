@@ -32,7 +32,7 @@ export default function FeedPost({
   const translate = useTranslations();
   return (
     <article>
-      <div className="flex gap-3">
+      <div className="flex gap-4">
         <Avatar size="small" imageUrl={user.avatarUrl || ""} alt={user.name} />
 
         <div className="flex flex-col gap-1 grow">

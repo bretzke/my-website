@@ -8,10 +8,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { SquareArrowOutUpRight } from "lucide-react";
 
-// TODO
-// use this config when we had users feedback's
-// export const revalidate = 60;
-
 export default async function Feedbacks({
   params: { locale },
 }: StaticPageProps) {
