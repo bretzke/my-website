@@ -9,6 +9,6 @@ export default {
   },
   theIdea: {
     title: "The idea 💡",
-    body: "I'll warn you in advance: the image you're about to see below won't be the most beautiful one you'll see today, and it might even make a UX designer cry. However, it was the starting point to bring this website to life—literally.<br /><br />I've always wanted to create a portfolio, but I never knew which layout to use. Then, one day, while browsing X, I started thinking about how that experience could be translated into a portfolio. The image below is the result of that insight.",
+    body: "I'll warn you in advance: the image you're about to see below won't be the most beautiful one you'll see today, and it might even make a UX designer cry. However, it was the starting point to bring this website to life - literally.<br /><br />I've always wanted to create a portfolio, but I never knew which layout to use. Then, one day, while browsing X, I started thinking about how that experience could be translated into a portfolio. The image below is the result of that insight.",
   },
 } as const;
