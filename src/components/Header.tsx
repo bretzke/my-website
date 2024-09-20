@@ -13,18 +13,19 @@ import {
 } from "./ui/dialog";
 import { Button } from "./ui/button";
 import { Settings } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const handjet = Handjet({
   subsets: ["latin"],
 });
 
 export default function Header() {
+  const locale = useLocale();
   const translate = useTranslations("settingsModal");
 
   return (
     <header className="flex justify-between items-center sticky top-0 z-10 p-2 bg-header">
-      <Link href="/" className={handjet.className}>
+      <Link href={`/${locale}`} className={handjet.className}>
         <h1 className="text-4xl">{"<Bretzke>"}</h1>
       </Link>
 

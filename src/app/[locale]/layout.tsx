@@ -11,25 +11,32 @@ import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { supportedLocales } from "@/i18n";
 import GoogleAnalytics from "@/lib/GoogleAnalytics";
+import { getTranslations } from "next-intl/server";
+import { StaticPageProps } from "@/utils/constants";
 
 const fontSans = FontSans({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Willian Bretzke | Portfolio",
-  // description: "",
-  creator: "Willian Bretzke",
-  authors: [
-    {
-      name: "Willian Bretzke",
-      url: "https://www.linkedin.com/in/willian-bretzke/",
-    },
-  ],
-};
-
 export function generateStaticParams() {
   return supportedLocales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params: { locale },
+}: StaticPageProps) {
+  const t = await getTranslations({ locale });
+
+  return {
+    title: t("pageTitle"),
+    creator: "Willian Bretzke",
+    authors: [
+      {
+        name: "Willian Bretzke",
+        url: "https://www.linkedin.com/in/willian-bretzke/",
+      },
+    ],
+  };
 }
 
 export default async function RootLayout({

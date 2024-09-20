@@ -19,4 +19,5 @@ export default {
     feedbacks: "Feedbacks",
   },
   pinned: "Fixado",
+  pageTitle: "Willian Bretzke | Portfólio",
 } as const;
