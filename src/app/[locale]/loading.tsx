@@ -1,7 +1,7 @@
 import Divider from "@/components/Divider";
 import { Skeleton } from "@/components/ui/skeleton";
 
-const FeedbackSkeleton = ({ pinned }: { pinned: boolean }) => (
+const PostSkeleton = ({ pinned }: { pinned: boolean }) => (
   <div className="flex gap-4">
     <Skeleton className="w-14 h-14 rounded-full" />
 
@@ -19,22 +19,27 @@ const FeedbackSkeleton = ({ pinned }: { pinned: boolean }) => (
         <Skeleton className="w-16 h-3" />
       </div>
 
-      <div className="mt-1 flex flex-col gap-1">
-        <Skeleton className="w-3/5 h-4" />
-        <Skeleton className="w-3/5 h-4" />
+      <div className="flex flex-col gap-3">
+        <div className="mt-1 flex flex-col gap-1">
+          <Skeleton className="w-full h-4" />
+          <Skeleton className="w-full h-4" />
+          <Skeleton className="w-full h-4" />
+        </div>
+
+        <Skeleton className="w-full h-96" />
       </div>
     </div>
   </div>
 );
 
 export default function Loading() {
-  const arrayLength = 5;
+  const arrayLength = 3;
 
   return (
     <section className="container-app flex flex-col gap-4">
       {Array.from({ length: arrayLength }).map((_, index) => (
         <div key={index} className="flex flex-col gap-4">
-          {<FeedbackSkeleton pinned={index === 0} />}
+          {<PostSkeleton pinned={index === 0} />}
           {index !== arrayLength - 1 && <Divider />}
         </div>
       ))}
