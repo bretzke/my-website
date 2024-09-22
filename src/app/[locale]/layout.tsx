@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { getMessages } from "next-intl/server";
@@ -12,7 +11,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { supportedLocales } from "@/i18n";
 import GoogleAnalytics from "@/lib/GoogleAnalytics";
 import { getTranslations } from "next-intl/server";
-import { StaticPageProps } from "@/utils/constants";
+import { myUserInfo, StaticPageProps } from "@/utils/constants";
+import { Metadata } from "next";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -24,12 +24,20 @@ export function generateStaticParams() {
 
 export async function generateMetadata({
   params: { locale },
-}: StaticPageProps) {
+}: StaticPageProps): Promise<Metadata> {
   const t = await getTranslations({ locale });
 
   return {
-    title: t("pageTitle"),
+    title: t("metadata.title"),
+    description: t("metadata.description"),
     creator: "Willian Bretzke",
+    openGraph: {
+      title: t("metadata.title"),
+      description: t("metadata.description"),
+      images: [myUserInfo.avatarUrl],
+      type: "website",
+    },
+
     authors: [
       {
         name: "Willian Bretzke",
@@ -50,12 +58,6 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <head>
-        <meta
-          property="og:image"
-          content="https://www.bretzke.dev/images/profile.jpg"
-        />
-      </head>
       <GoogleAnalytics />
       <NextIntlClientProvider messages={messages}>
         <body className={`${fontSans.className} min-w-80`}>

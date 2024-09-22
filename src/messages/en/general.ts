@@ -19,5 +19,8 @@ export default {
     feedbacks: "Feedbacks",
   },
   pinned: "Pinned",
-  pageTitle: "Willian Bretzke | Portfolio",
+  metadata: {
+    title: "Willian Bretzke | Portfolio",
+    description: "Explore the portfolio of Willian Bretzke, senior developer.",
+  },
 } as const;
