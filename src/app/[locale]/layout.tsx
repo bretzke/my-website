@@ -50,6 +50,12 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <meta
+          property="og:image"
+          content="https://www.bretzke.dev/images/profile.jpg"
+        />
+      </head>
       <GoogleAnalytics />
       <NextIntlClientProvider messages={messages}>
         <body className={`${fontSans.className} min-w-80`}>
