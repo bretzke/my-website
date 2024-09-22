@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 import { companiesLogo, StaticPageProps } from "@/utils/constants";
 import Divider from "@/components/Divider";
 import { unstable_setRequestLocale } from "next-intl/server";
+import ListStacks from "./components/ListStacks";
 
 const convertTextToHTML = {
   item: (chunks: ReactNode) => <li>{chunks}</li>,
@@ -104,6 +105,8 @@ export default function About({ params: { locale } }: StaticPageProps) {
           {index !== experiences.length - 1 && <Divider />}
         </div>
       ))}
+
+      <ListStacks />
 
       <h1 className="font-bold text-3xl text-center">
         {translate("education.title")}

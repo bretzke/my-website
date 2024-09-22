@@ -64,4 +64,12 @@ export default {
       endDate: "June 2024",
     },
   },
+  skills: {
+    title: "Skills",
+    programmingLanguage: "Programming language",
+    database: "Database",
+    frameworks: "Frameworks",
+    tools: "Tools",
+    others: "Others",
+  },
 } as const;

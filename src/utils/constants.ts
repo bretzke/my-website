@@ -50,3 +50,31 @@ export const mySocialMedias = {
     label: "LinkedIn",
   },
 };
+
+export const skillsLogo = {
+  cSharp: "/images/skills/c-sharp.svg",
+  php: "/images/skills/php.svg",
+  typescript: "/images/skills/typescript.svg",
+  // DB
+  mysql: "/images/skills/mysql.svg",
+  postgresql: "/images/skills/postgresql.svg",
+  cassandra: "/images/skills/cassandra.svg",
+  mongodb: "/images/skills/mongodb.svg",
+  firebase: "/images/skills/firebase.svg",
+  // Frameworks
+  react: "/images/skills/react.svg",
+  angular: "/images/skills/angular.svg",
+  next: "/images/skills/next.svg",
+  nest: "/images/skills/nest.svg",
+  // Tools
+  git: "/images/skills/git.svg",
+  docker: "/images/skills/docker.svg",
+  azure: "/images/skills/azure.svg",
+  figma: "/images/skills/figma.svg",
+  // Others
+  node: "/images/skills/node.svg",
+  html: "/images/skills/html.svg",
+  css: "/images/skills/css.svg",
+  sass: "/images/skills/sass.svg",
+  tailwind: "/images/skills/tailwind.svg",
+};
