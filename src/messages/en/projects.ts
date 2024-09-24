@@ -9,4 +9,6 @@ export default {
     description:
       "The purpose of this project is to centralize and showcase my portfolio in an organized manner. For the front-end, I used Next.js 14 along with Shadcn/UI to create a modern and responsive interface. On the back-end, I opted for Next.js API Routes integrated with Prisma, using a PostgreSQL database to store user feedback. Additionally, I implemented site internationalization, utilizing Next.js routes to support multiple languages.",
   },
+  repo: "Repository",
+  website: "Website",
 } as const;

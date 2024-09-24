@@ -67,10 +67,10 @@ export default function Projects({ params: { locale } }: StaticPageProps) {
           {project.site?.length > 0 && project.repo?.length > 0 && (
             <CardFooter className="flex justify-end gap-2">
               <Link href={project.site} target="_blank">
-                <Button variant="outline">Site</Button>
+                <Button variant="outline">{translate("website")}</Button>
               </Link>
               <Link href={project.repo} target="_blank">
-                <Button variant="outline">Repositório</Button>
+                <Button variant="outline">{translate("repo")}</Button>
               </Link>
             </CardFooter>
           )}
