@@ -28,7 +28,7 @@ const FeedbackSkeleton = ({ pinned }: { pinned: boolean }) => (
 );
 
 export default function Loading() {
-  const arrayLength = 1;
+  const arrayLength = 3;
 
   return (
     <section className="container-app flex flex-col gap-4">
