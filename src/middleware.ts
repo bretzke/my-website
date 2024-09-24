@@ -2,10 +2,17 @@ import createMiddleware from "next-intl/middleware";
 import { NextRequest } from "next/server";
 
 export default async function middleware(request: NextRequest) {
+  const userLanguage = request.headers
+    .get("accept-language")
+    ?.split(",")[0]
+    ?.split("-")[0];
+  const defaultLocale = userLanguage === "pt" ? "pt" : "en";
+
   const handleI18nRouting = createMiddleware({
     locales: ["pt", "en"],
-    defaultLocale: "en",
+    defaultLocale,
   });
+
   const response = handleI18nRouting(request);
 
   return response;
