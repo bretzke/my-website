@@ -27,6 +27,16 @@ import { apiPaths, myUserInfo, publishedDate } from "@/utils/constants";
 import { useToast } from "@/hooks/use-toast";
 import FeedPost from "@/components/FeedPost";
 
+const Optional = () => {
+  const translate = useTranslations("feedbacks");
+  return (
+    <div className="flex gap-1 items-center">
+      <div className="h-1 w-1 rounded-full bg-foreground"></div>
+      <small className="text-xs">{translate("optional")}</small>
+    </div>
+  );
+};
+
 function SheetForm() {
   const [open, setOpen] = useState(false);
   const [isSending, setIsSending] = useState(false);
@@ -132,8 +142,9 @@ function SheetForm() {
                 name="siteUrl"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>
+                    <FormLabel className="flex gap-1 items-center">
                       {translate("formFeedback.fields.siteUrl.label")}
+                      <Optional />
                     </FormLabel>
                     <FormControl>
                       <Input
@@ -152,8 +163,9 @@ function SheetForm() {
                 name="imageUrl"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>
+                    <FormLabel className="flex gap-1 items-center">
                       {translate("formFeedback.fields.avatarUrl.label")}
+                      <Optional />
                     </FormLabel>
                     <FormControl>
                       <Input

@@ -38,4 +38,5 @@ export default {
     btnSendFeedback: "Send feedback",
     btnSendingFeedback: "Sending...",
   },
+  optional: "Optional",
 } as const;
