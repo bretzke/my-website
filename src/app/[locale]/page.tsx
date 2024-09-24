@@ -29,21 +29,6 @@ export default function Home({ params: { locale } }: StaticPageProps) {
       </FeedPost>
       <Divider />
       <FeedPost
-        postTitle={translate("soonTheBlog.title")}
-        postBody={translate("soonTheBlog.body")}
-        user={myUserInfo}
-        postedAt={publishedDate}
-      >
-        <Image
-          src={imagesPostPath.soonTheBlog}
-          alt=""
-          width={500}
-          height={500}
-          priority
-        />
-      </FeedPost>
-      <Divider />
-      <FeedPost
         postTitle={translate("theIdea.title")}
         postBody={translate("theIdea.body")}
         user={myUserInfo}
