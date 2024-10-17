@@ -17,3 +17,27 @@ model UserFeedback {
   pinned    Boolean  @default(false)
   createdAt DateTime @default(now())
 }
+
+model Post {
+  id        String    @id @default(uuid())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime?
+
+  PostTranslation PostTranslation[]
+}
+
+enum Language {
+  en
+  pt
+}
+
+model PostTranslation {
+  id       String   @id @default(uuid())
+  postId   String
+  language Language
+  title    String
+  seo      String
+  content  String   @db.Text
+
+  post Post @relation(fields: [postId], references: [id])
+}
