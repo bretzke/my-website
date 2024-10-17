@@ -3,34 +3,28 @@ import prisma from "@/utils/db";
 import { Metadata } from "next";
 import { unstable_setRequestLocale } from "next-intl/server";
 
-export async function getStaticPaths() {
-  const posts = await prisma.post.findMany({
-    include: { PostTranslation: true },
-  });
-
-  const paths: BlogPostParams[] = [];
-
-  posts.forEach((post) => {
-    post.PostTranslation.forEach((postTranslated) => {
-      paths.push({
-        params: {
-          post: postTranslated.seo,
-          locale: postTranslated.language,
-        },
-      });
-    });
-  });
-
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
 export interface BlogPostParams {
   params: StaticPageProps["params"] & {
     post: string;
   };
+}
+
+export async function generateStaticParams() {
+  const posts = await prisma.post.findMany({
+    include: { PostTranslation: true },
+  });
+  const paths: BlogPostParams["params"][] = [];
+
+  posts.forEach((post) => {
+    post.PostTranslation.forEach((postTranslated) => {
+      paths.push({
+        locale: postTranslated.language,
+        post: postTranslated.seo,
+      });
+    });
+  });
+
+  return paths;
 }
 
 export async function generateMetadata({
@@ -62,3 +56,6 @@ export default async function BlogPost({
 
   return <div>{JSON.stringify(postData)}</div>;
 }
+
+export const dynamic = "force-static";
+export const dynamicParams = false;
