@@ -10,7 +10,7 @@ export interface BlogPostParams {
 }
 
 export async function generateStaticParams() {
-  const posts = await prisma.post.findMany({
+  const posts = await prisma.blogPost.findMany({
     include: { PostTranslation: true },
   });
   const paths: BlogPostParams["params"][] = [];
@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params: { post, locale },
 }: BlogPostParams): Promise<Metadata> {
-  const postTranslated = await prisma.postTranslation.findFirstOrThrow({
+  const postTranslated = await prisma.blogPostTranslation.findFirstOrThrow({
     where: {
       seo: post,
       language: locale,
@@ -47,7 +47,7 @@ export default async function BlogPost({
 }: BlogPostParams) {
   unstable_setRequestLocale(locale);
 
-  const postData = await prisma.postTranslation.findFirstOrThrow({
+  const postData = await prisma.blogPostTranslation.findFirstOrThrow({
     where: {
       language: locale,
       seo: post,

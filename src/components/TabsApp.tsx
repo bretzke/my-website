@@ -39,6 +39,10 @@ export function TabsApp({ children }: TabsAppProps) {
           path: `/${locale}/projects`,
         },
         {
+          label: "Blog",
+          path: `/${locale}/blog`,
+        },
+        {
           label: translate("feedbacks"),
           path: `/${locale}/feedbacks`,
         },

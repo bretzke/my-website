@@ -18,12 +18,13 @@ model UserFeedback {
   createdAt DateTime @default(now())
 }
 
-model Post {
+model BlogPost {
   id        String    @id @default(uuid())
+  imageUrl  String?
   createdAt DateTime  @default(now())
   updatedAt DateTime?
 
-  PostTranslation PostTranslation[]
+  PostTranslation BlogPostTranslation[]
 }
 
 enum Language {
@@ -31,7 +32,7 @@ enum Language {
   pt
 }
 
-model PostTranslation {
+model BlogPostTranslation {
   id       String   @id @default(uuid())
   postId   String
   language Language
@@ -39,5 +40,5 @@ model PostTranslation {
   seo      String
   content  String   @db.Text
 
-  post Post @relation(fields: [postId], references: [id])
+  post BlogPost @relation(fields: [postId], references: [id])
 }
