@@ -24,8 +24,6 @@ export default async function Blog({ params: { locale } }: StaticPageProps) {
     },
   });
 
-  console.log(posts);
-
   return (
     <section className="container-app flex">
       {posts.map((post) => (

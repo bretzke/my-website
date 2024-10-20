@@ -13,6 +13,7 @@ import {
 import { Button } from "./ui/button";
 import { Settings } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const handjet = Handjet({
   subsets: ["latin"],
@@ -22,10 +23,10 @@ export default function Header() {
   const translate = useTranslations("settingsModal");
 
   return (
-    <header className="flex justify-between items-center sticky top-0 z-10 p-2 bg-header">
-      <div className={handjet.className}>
+    <nav className="flex justify-between items-center sticky top-0 z-10 p-2 bg-header">
+      <Link className={handjet.className} href="/">
         <h1 className="text-4xl">{"<Bretzke>"}</h1>
-      </div>
+      </Link>
 
       <Dialog>
         <DialogTrigger asChild>
@@ -44,6 +45,6 @@ export default function Header() {
           </div>
         </DialogContent>
       </Dialog>
-    </header>
+    </nav>
   );
 }

@@ -21,13 +21,17 @@ import { Button } from "./ui/button";
 import { mySocialMedias, myUserInfo, publishedDate } from "@/utils/constants";
 import Link from "next/link";
 import Image from "next/image";
-import { useFormattedDate } from "@/hooks/use-formatted-date";
 import Typewriter from "typewriter-effect";
 import { useParams } from "next/navigation";
+import { formatDate } from "@/utils/date";
 
 export default function ProfileHeader() {
-  const { locale } = useParams();
+  const { locale, post } = useParams();
   const translate = useTranslations("profileHeader");
+
+  if (post) {
+    return <></>;
+  }
 
   return (
     <header>
@@ -150,7 +154,11 @@ export default function ProfileHeader() {
             <CalendarFold />
             <p>
               {translate("joined")}
-              {useFormattedDate(publishedDate, "long")}
+              {formatDate({
+                dateToFormat: publishedDate,
+                dateStyle: "long",
+                locale: locale as string,
+              })}
             </p>
           </div>
         </div>

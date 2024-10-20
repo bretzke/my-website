@@ -1,7 +1,7 @@
 "use client";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { ReactNode, useMemo } from "react";
 
 interface TabsAppProps {
@@ -15,6 +15,7 @@ interface MenuOptionProps {
 
 export function TabsApp({ children }: TabsAppProps) {
   const locale = useLocale();
+  const { post } = useParams();
   const currentPath = usePathname();
   const translate = useTranslations("tabs");
   const router = useRouter();
@@ -49,6 +50,10 @@ export function TabsApp({ children }: TabsAppProps) {
       ] as MenuOptionProps[],
     [locale, translate]
   );
+
+  if (post) {
+    return children;
+  }
 
   return (
     <main>
