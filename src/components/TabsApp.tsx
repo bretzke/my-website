@@ -1,8 +1,9 @@
 "use client";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { routesPath } from "@/utils/path";
 import { useLocale, useTranslations } from "next-intl";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { ReactNode, useMemo } from "react";
+import { Button } from "./ui/button";
 
 interface TabsAppProps {
   children: ReactNode;
@@ -14,7 +15,7 @@ interface MenuOptionProps {
 }
 
 export function TabsApp({ children }: TabsAppProps) {
-  const locale = useLocale();
+  const locale = useLocale() as "pt" | "en";
   const { post } = useParams();
   const currentPath = usePathname();
   const translate = useTranslations("tabs");
@@ -29,23 +30,23 @@ export function TabsApp({ children }: TabsAppProps) {
       [
         {
           label: translate("posts"),
-          path: `/${locale}`,
+          path: routesPath.home[locale],
         },
         {
           label: translate("about"),
-          path: `/${locale}/about`,
+          path: routesPath.about[locale],
         },
         {
           label: translate("projects"),
-          path: `/${locale}/projects`,
+          path: routesPath.projects[locale],
         },
         {
           label: "Blog",
-          path: `/${locale}/blog`,
+          path: routesPath.blog[locale],
         },
         {
           label: translate("feedbacks"),
-          path: `/${locale}/feedbacks`,
+          path: routesPath.feedbacks[locale],
         },
       ] as MenuOptionProps[],
     [locale, translate]
@@ -57,26 +58,27 @@ export function TabsApp({ children }: TabsAppProps) {
 
   return (
     <main>
-      <Tabs
-        defaultValue={currentPath}
-        onValueChange={handleTabChange}
-        activationMode="manual"
-      >
-        <div className="container-app">
-          <TabsList className="w-full bg-secondary flex p-0">
-            {menuOptions.map((option) => (
-              <TabsTrigger
-                key={option.path}
-                value={option.path}
-                className="grow max-sm:px-1 max-sm:py-3"
-              >
-                {option.label}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        </div>
-        <div className="py-4">{children}</div>
-      </Tabs>
+      <div className="container-app flex">
+        {menuOptions.map((option) => {
+          const selected = currentPath === option.path;
+
+          return (
+            <Button
+              key={option.path}
+              variant="default"
+              className={`grow max-sm:px-1 max-sm:py-3 text-foreground ${
+                selected
+                  ? "bg-background active:bg-background hover:bg-background"
+                  : "bg-secondary"
+              }`}
+              onClick={() => handleTabChange(option.path)}
+            >
+              {option.label}
+            </Button>
+          );
+        })}
+      </div>
+      <div className="py-4">{children}</div>
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function Loading() {
+export default function LoadingAbout() {
   return (
     <section className="container-app flex flex-col gap-4">
       <Skeleton className="w-48 h-9 m-auto" />

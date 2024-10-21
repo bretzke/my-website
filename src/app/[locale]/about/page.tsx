@@ -7,19 +7,18 @@ import { companiesLogo, StaticPageProps } from "@/utils/constants";
 import Divider from "@/components/Divider";
 import { unstable_setRequestLocale } from "next-intl/server";
 import ListStacks from "./components/ListStacks";
+import { redirect } from "next/navigation";
 
-const convertTextToHTML = {
-  item: (chunks: ReactNode) => <li>{chunks}</li>,
-  list: (chunks: ReactNode) => (
-    <ul className="list-inside list-disc">{chunks}</ul>
-  ),
-  br: () => <br />,
-};
-
-export default function About({ params: { locale } }: StaticPageProps) {
-  unstable_setRequestLocale(locale);
-
+export const AboutPage = () => {
   const translate = useTranslations("about");
+
+  const convertTextToHTML = {
+    item: (chunks: ReactNode) => <li>{chunks}</li>,
+    list: (chunks: ReactNode) => (
+      <ul className="list-inside list-disc">{chunks}</ul>
+    ),
+    br: () => <br />,
+  };
 
   const experiences = [
     {
@@ -131,4 +130,10 @@ export default function About({ params: { locale } }: StaticPageProps) {
       />
     </section>
   );
+};
+
+export default function Page({ params: { locale } }: StaticPageProps) {
+  unstable_setRequestLocale(locale);
+
+  return <AboutPage />;
 }

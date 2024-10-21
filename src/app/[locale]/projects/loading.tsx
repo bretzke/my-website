@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function Loading() {
+export default function LoadingProjects() {
   return (
     <section className="container-app flex flex-col gap-4">
       <Card className="p-6 flex flex-col gap-6">

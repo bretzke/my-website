@@ -13,23 +13,23 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { unstable_setRequestLocale } from "next-intl/server";
 
-const convertTextToHTML = {
-  stripedoc: (chunks: ReactNode) => (
-    <Link
-      target="_blank"
-      className="list-inside list-disc underline cursor-pointer"
-      href="https://docs.stripe.com/testing"
-    >
-      {chunks}
-    </Link>
-  ),
-  i: (chunks: ReactNode) => <i className="list-inside list-disc">{chunks}</i>,
-  br: () => <br />,
-};
-
-export default function Projects({ params: { locale } }: StaticPageProps) {
-  unstable_setRequestLocale(locale);
+export const ProjetcsPage = () => {
   const translate = useTranslations("projects");
+
+  const convertTextToHTML = {
+    stripedoc: (chunks: ReactNode) => (
+      <Link
+        target="_blank"
+        className="list-inside list-disc underline cursor-pointer"
+        href="https://docs.stripe.com/testing"
+      >
+        {chunks}
+      </Link>
+    ),
+    i: (chunks: ReactNode) => <i className="list-inside list-disc">{chunks}</i>,
+    br: () => <br />,
+  };
+
   const projects = [
     {
       title: translate("wbShop.title"),
@@ -78,4 +78,10 @@ export default function Projects({ params: { locale } }: StaticPageProps) {
       ))}
     </section>
   );
+};
+
+export default function Projects({ params: { locale } }: StaticPageProps) {
+  unstable_setRequestLocale(locale);
+
+  return <ProjetcsPage />;
 }
