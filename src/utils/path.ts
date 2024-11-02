@@ -1,22 +1,7 @@
 export const routesPath = {
-  home: {
-    pt: "/pt",
-    en: "/en",
-  },
-  about: {
-    pt: "/pt/sobre",
-    en: "/en/about",
-  },
-  projects: {
-    pt: "/pt/projetos",
-    en: "/en/projects",
-  },
-  blog: {
-    pt: "/pt/blog",
-    en: "/en/blog",
-  },
-  feedbacks: {
-    pt: "/pt/feedbacks",
-    en: "/en/feedbacks",
-  },
+  home: (locale: string) => `/${locale}`,
+  about: (locale: string) => `/${locale}/about`,
+  projects: (locale: string) => `/${locale}/projects`,
+  blog: (locale: string) => `/${locale}/blog`,
+  feedbacks: (locale: string) => `/${locale}/feedbacks`,
 };

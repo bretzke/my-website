@@ -30,23 +30,23 @@ export function TabsApp({ children }: TabsAppProps) {
       [
         {
           label: translate("posts"),
-          path: routesPath.home[locale],
+          path: routesPath.home(locale),
         },
         {
           label: translate("about"),
-          path: routesPath.about[locale],
+          path: routesPath.about(locale),
         },
         {
           label: translate("projects"),
-          path: routesPath.projects[locale],
+          path: routesPath.projects(locale),
         },
         {
           label: "Blog",
-          path: routesPath.blog[locale],
+          path: routesPath.blog(locale),
         },
         {
           label: translate("feedbacks"),
-          path: routesPath.feedbacks[locale],
+          path: routesPath.feedbacks(locale),
         },
       ] as MenuOptionProps[],
     [locale, translate]
@@ -65,15 +65,17 @@ export function TabsApp({ children }: TabsAppProps) {
           return (
             <Button
               key={option.path}
-              variant="default"
-              className={`grow max-sm:px-1 max-sm:py-3 text-foreground ${
-                selected
-                  ? "bg-background active:bg-background hover:bg-background"
-                  : "bg-secondary"
-              }`}
+              variant="ghost"
+              className={`grow max-sm:px-1 py-0 text-foreground hover:bg-background`}
               onClick={() => handleTabChange(option.path)}
             >
-              {option.label}
+              <span
+                className={`border-b-4 h-10 flex items-center ${
+                  selected ? "border-primary" : "border-transparent"
+                }`}
+              >
+                {option.label}
+              </span>
             </Button>
           );
         })}

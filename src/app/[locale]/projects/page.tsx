@@ -1,3 +1,6 @@
+import { projectsInfo, StaticPageProps } from "@/utils/constants";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { ReactNode } from "react";
 import {
   Card,
@@ -6,14 +9,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { projectsInfo, StaticPageProps } from "@/utils/constants";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { unstable_setRequestLocale } from "next-intl/server";
 
-export const ProjetcsPage = () => {
+export default function Projects({ params: { locale } }: StaticPageProps) {
+  unstable_setRequestLocale(locale);
+
   const translate = useTranslations("projects");
 
   const convertTextToHTML = {
@@ -78,10 +80,4 @@ export const ProjetcsPage = () => {
       ))}
     </section>
   );
-};
-
-export default function Projects({ params: { locale } }: StaticPageProps) {
-  unstable_setRequestLocale(locale);
-
-  return <ProjetcsPage />;
 }

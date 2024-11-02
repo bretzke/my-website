@@ -7,9 +7,10 @@ import { companiesLogo, StaticPageProps } from "@/utils/constants";
 import Divider from "@/components/Divider";
 import { unstable_setRequestLocale } from "next-intl/server";
 import ListStacks from "./components/ListStacks";
-import { redirect } from "next/navigation";
 
-export const AboutPage = () => {
+export default function About({ params: { locale } }: StaticPageProps) {
+  unstable_setRequestLocale(locale);
+
   const translate = useTranslations("about");
 
   const convertTextToHTML = {
@@ -130,10 +131,4 @@ export const AboutPage = () => {
       />
     </section>
   );
-};
-
-export default function Page({ params: { locale } }: StaticPageProps) {
-  unstable_setRequestLocale(locale);
-
-  return <AboutPage />;
 }

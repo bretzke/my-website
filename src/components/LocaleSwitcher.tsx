@@ -2,19 +2,25 @@ import { useLocale, useTranslations } from "next-intl";
 import { Button } from "./ui/button";
 import { useMemo } from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
+import prisma from "@/utils/db";
+import { routesPath } from "@/utils/path";
 
 export default function LocaleSwitcher() {
   const locale = useLocale();
+  const { post } = useParams();
   const nextLocale = useMemo(() => (locale === "pt" ? "en" : "pt"), [locale]);
   const translate = useTranslations("settingsModal");
   const currentPath = usePathname();
 
-  const redirectTo = useMemo(
-    () => currentPath.replace(`/${locale}`, `/${nextLocale}`),
-    [locale, nextLocale, currentPath]
-  );
+  const redirectTo = useMemo(() => {
+    if (post) {
+      return routesPath.blog(nextLocale);
+    }
+
+    return currentPath.replace(`/${locale}`, `/${nextLocale}`);
+  }, [locale, nextLocale, currentPath, post]);
 
   return (
     <div className="relative flex flex-col gap-1 items-center">
