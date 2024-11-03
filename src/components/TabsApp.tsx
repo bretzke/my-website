@@ -66,7 +66,9 @@ export function TabsApp({ children }: TabsAppProps) {
             <Button
               key={option.path}
               variant="ghost"
-              className={`grow max-sm:px-1 py-0 text-foreground hover:bg-background`}
+              className={`grow max-sm:px-1 py-0 text-foreground ${
+                selected ? "hover:bg-transparent" : "hover:bg-background"
+              }`}
               onClick={() => handleTabChange(option.path)}
             >
               <span
