@@ -29,22 +29,19 @@ export default async function Blog({ params: { locale } }: StaticPageProps) {
       {posts.map((post) => (
         <Link href={`/${locale}/blog/${post.seo}`} key={post.id}>
           <Card>
-            <CardHeader>
-              <Image
-                src={post.post.imageUrl as string}
-                alt=""
-                width={200}
-                height={200}
-              />
+            <CardHeader className="relative h-56 p-0">
+              <Image src={post.post.imageUrl as string} alt={post.title} fill />
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex flex-col gap-2 p-4">
               <CardTitle>{post.title}</CardTitle>
-            </CardContent>
-            <CardFooter>
               <small className="text-sm">
-                {formatDate({ dateToFormat: post.post.createdAt, locale })}
+                {formatDate({
+                  locale,
+                  dateToFormat: post.post.createdAt,
+                  dateStyle: "long",
+                })}
               </small>
-            </CardFooter>
+            </CardContent>
           </Card>
         </Link>
       ))}

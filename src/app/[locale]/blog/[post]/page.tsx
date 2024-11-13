@@ -104,6 +104,7 @@ export default async function BlogPost({
                 {formatDate({
                   locale,
                   dateToFormat: postData.post.createdAt,
+                  dateStyle: "long",
                 })}
               </small>
             </div>
@@ -111,7 +112,7 @@ export default async function BlogPost({
         </div>
 
         <article
-          className="flex flex-col gap-4 text-justify"
+          className="flex flex-col gap-4"
           dangerouslySetInnerHTML={{ __html: postData.content }}
         ></article>
       </section>

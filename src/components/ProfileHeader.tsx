@@ -158,6 +158,7 @@ export default function ProfileHeader() {
                 dateToFormat: publishedDate,
                 dateStyle: "long",
                 locale: locale as string,
+                displayDay: false,
               })}
             </p>
           </div>

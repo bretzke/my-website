@@ -48,6 +48,16 @@ export const shadcnPlugin = plugin(
         a: {
           "text-decoration": "underline",
         },
+        ul: {
+          "list-style-type": "disc",
+          "list-style-position": "inside",
+        },
+        pre: {
+          "border-radius": "8px",
+          padding: "1rem",
+          color: "hsl(var(--secondary))",
+          background: "hsl(var(--foreground))",
+        },
       },
     };
 
