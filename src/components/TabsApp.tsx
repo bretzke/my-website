@@ -72,8 +72,8 @@ export function TabsApp({ children }: TabsAppProps) {
               onClick={() => handleTabChange(option.path)}
             >
               <span
-                className={`border-b-4 h-10 flex items-center ${
-                  selected ? "border-primary" : "border-transparent"
+                className={`border-y-4 h-10 flex items-center border-y-transparent ${
+                  selected && "border-b-primary"
                 }`}
               >
                 {option.label}

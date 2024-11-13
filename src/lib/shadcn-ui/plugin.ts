@@ -39,6 +39,16 @@ export const shadcnPlugin = plugin(
           padding: "0 6rem",
         },
       },
+
+      article: {
+        h1: {
+          "font-size": "20px",
+          "font-weight": "bold",
+        },
+        a: {
+          "text-decoration": "underline",
+        },
+      },
     };
 
     addUtilities(newUtilities);

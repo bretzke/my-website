@@ -81,7 +81,7 @@ export default async function BlogPost({
         <div>
           <h1 className="text-2xl font-bold">{postData.title}</h1>
           <Breadcrumb>
-            <BreadcrumbList>
+            <BreadcrumbList className="sm:gap-1">
               <BreadcrumbItem>
                 <BreadcrumbLink href={`/${locale}/blog`}>Blog</BreadcrumbLink>
               </BreadcrumbItem>
@@ -110,7 +110,10 @@ export default async function BlogPost({
           </div>
         </div>
 
-        {JSON.stringify(postData)}
+        <article
+          className="flex flex-col gap-4 text-justify"
+          dangerouslySetInnerHTML={{ __html: postData.content }}
+        ></article>
       </section>
     </div>
   );
