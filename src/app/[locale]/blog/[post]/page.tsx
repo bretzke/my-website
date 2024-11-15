@@ -70,7 +70,7 @@ export default async function BlogPost({
 
   return (
     <div className="flex flex-col gap-4 pb-4">
-      <header className="w-full max-sm:h-64 max-md:h-96 h-[600px] relative bg-background">
+      <header className="w-full max-sm:h-64 max-md:h-96 max-lg:h-[500px] h-[600px] relative bg-background">
         <Image
           src={postData.post.imageUrl as string}
           alt={postData.title}
