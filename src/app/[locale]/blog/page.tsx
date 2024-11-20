@@ -27,7 +27,11 @@ export default async function Blog({ params: { locale } }: StaticPageProps) {
   return (
     <section className="container-app flex">
       {posts.map((post) => (
-        <Link href={`/${locale}/blog/${post.seo}`} key={post.id}>
+        <Link
+          href={`/${locale}/blog/${post.seo}`}
+          key={post.id}
+          className="max-sm:w-full"
+        >
           <Card>
             <CardHeader className="relative h-56 p-0">
               <Image src={post.post.imageUrl as string} alt={post.title} fill />

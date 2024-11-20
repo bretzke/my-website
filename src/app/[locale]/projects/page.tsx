@@ -34,18 +34,25 @@ export default function Projects({ params: { locale } }: StaticPageProps) {
 
   const projects = [
     {
-      title: translate("wbShop.title"),
-      bgImage: projectsInfo.wbShop.logo,
-      description: translate.rich("wbShop.description", convertTextToHTML),
-      repo: projectsInfo.wbShop.repo,
-      site: projectsInfo.wbShop.site,
+      title: translate("dictionary.title"),
+      bgImage: projectsInfo.dictionary.logo,
+      description: translate.rich("dictionary.description", convertTextToHTML),
+      repo: projectsInfo.dictionary.repo,
+      site: projectsInfo.dictionary.site,
     },
     {
       title: translate("myWebsite.title"),
       description: translate("myWebsite.description"),
       bgImage: projectsInfo.myWebsite.logo,
       site: "",
-      repo: "",
+      repo: projectsInfo.myWebsite.repo,
+    },
+    {
+      title: translate("wbShop.title"),
+      bgImage: projectsInfo.wbShop.logo,
+      description: translate.rich("wbShop.description", convertTextToHTML),
+      repo: projectsInfo.wbShop.repo,
+      site: projectsInfo.wbShop.site,
     },
   ];
 
@@ -66,16 +73,18 @@ export default function Projects({ params: { locale } }: StaticPageProps) {
             <CardTitle>{project.title}</CardTitle>
             <div>{project.description}</div>
           </CardContent>
-          {project.site?.length > 0 && project.repo?.length > 0 && (
-            <CardFooter className="flex justify-end gap-2">
+          <CardFooter className="flex justify-end gap-2">
+            {project.site.length > 0 && (
               <Link href={project.site} target="_blank">
                 <Button variant="outline">{translate("website")}</Button>
               </Link>
+            )}
+            {project.repo.length > 0 && (
               <Link href={project.repo} target="_blank">
                 <Button variant="outline">{translate("repo")}</Button>
               </Link>
-            </CardFooter>
-          )}
+            )}
+          </CardFooter>
         </Card>
       ))}
     </section>

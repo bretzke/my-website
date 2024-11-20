@@ -15,6 +15,12 @@ export const projectsInfo = {
   },
   myWebsite: {
     logo: "/images/projects/my-website.png",
+    repo: "https://github.com/bretzke/my-website",
+  },
+  dictionary: {
+    logo: "/images/projects/dictionary.png",
+    repo: "https://github.com/bretzke/web-scraping-dictionary",
+    site: "https://dicionario-pt-br-sigma.vercel.app/",
   },
 };
 
