@@ -1,14 +1,8 @@
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { StaticPageProps } from "@/utils/constants";
 import { formatDate } from "@/utils/date";
 import prisma from "@/utils/db";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,6 +17,8 @@ export default async function Blog({ params: { locale } }: StaticPageProps) {
       language: locale,
     },
   });
+
+  const translate = await getTranslations("blog");
 
   return (
     <section className="container-app flex">
@@ -39,6 +35,8 @@ export default async function Blog({ params: { locale } }: StaticPageProps) {
             <CardContent className="flex flex-col gap-2 p-4">
               <CardTitle>{post.title}</CardTitle>
               <small className="text-sm">
+                {translate("publishedIn")}
+                {": "}
                 {formatDate({
                   locale,
                   dateToFormat: post.post.createdAt,

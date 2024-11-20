@@ -18,6 +18,9 @@ export default {
     projects: "Projects",
     feedbacks: "Feedbacks",
   },
+  blog: {
+    publishedIn: "Published in",
+  },
   pinned: "Pinned",
   metadata: {
     title: "Willian Bretzke | Portfolio",

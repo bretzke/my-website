@@ -11,7 +11,7 @@ import { myUserInfo, StaticPageProps } from "@/utils/constants";
 import { formatDate } from "@/utils/date";
 import prisma from "@/utils/db";
 import { Metadata } from "next";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 
 export interface BlogPostParams {
@@ -68,6 +68,8 @@ export default async function BlogPost({
     },
   });
 
+  const translate = await getTranslations("blog");
+
   return (
     <div className="flex flex-col gap-4 pb-4">
       <header className="w-full max-sm:h-64 max-md:h-96 max-lg:h-[500px] h-[600px] relative bg-background">
@@ -101,6 +103,8 @@ export default async function BlogPost({
                 {myUserInfo.name}
               </h3>
               <small>
+                {translate("publishedIn")}
+                {": "}
                 {formatDate({
                   locale,
                   dateToFormat: postData.post.createdAt,
