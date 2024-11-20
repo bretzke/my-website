@@ -1,10 +1,12 @@
 import Divider from "@/components/Divider";
 import FeedPost from "@/components/FeedPost";
+import { Button } from "@/components/ui/button";
 import { myUserInfo, publishedDate, StaticPageProps } from "@/utils/constants";
 import { imagesPostPath } from "@/utils/imagesPath";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home({ params: { locale } }: StaticPageProps) {
   unstable_setRequestLocale(locale);
@@ -26,6 +28,26 @@ export default function Home({ params: { locale } }: StaticPageProps) {
           height={1000}
           priority
         />
+      </FeedPost>
+      <Divider />
+      <FeedPost
+        postTitle={translate("blogLaunch.title")}
+        postBody={translate("blogLaunch.body")}
+        user={myUserInfo}
+        postedAt={new Date("2024-11-21 12:00:00")}
+      >
+        <Link href="/blog" className="relative hover:opacity-75 transition-all">
+          <Image
+            src={imagesPostPath.rocketSky}
+            alt=""
+            width={1000}
+            height={1000}
+            priority
+          />
+          <span className="absolute w-full bottom-0 bg-primary text-primary-foreground text-center p-1 text-lg font-bold">
+            {translate("blogLaunch.cta")}
+          </span>
+        </Link>
       </FeedPost>
       <Divider />
       <FeedPost
