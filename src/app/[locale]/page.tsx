@@ -1,8 +1,8 @@
 import Divider from "@/components/Divider";
 import FeedPost from "@/components/FeedPost";
-import { Button } from "@/components/ui/button";
 import { myUserInfo, publishedDate, StaticPageProps } from "@/utils/constants";
 import { imagesPostPath } from "@/utils/imagesPath";
+import { routesPath } from "@/utils/path";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import Image from "next/image";
@@ -36,7 +36,10 @@ export default function Home({ params: { locale } }: StaticPageProps) {
         user={myUserInfo}
         postedAt={new Date("2024-11-21 12:00:00")}
       >
-        <Link href="/blog" className="relative hover:opacity-75 transition-all">
+        <Link
+          href={routesPath.blog(locale)}
+          className="relative hover:opacity-75 transition-all"
+        >
           <Image
             src={imagesPostPath.rocketSky}
             alt=""
