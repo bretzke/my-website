@@ -41,19 +41,22 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params: { post, locale },
 }: BlogPostParams): Promise<Metadata> {
-  const postTranslated = await prisma.blogPostTranslation.findFirstOrThrow({
-    where: {
-      seo: post,
-      language: locale,
-    },
-    include: {
-      post: true,
-    },
-  });
+  const [postTranslated, translate] = await Promise.all([
+    prisma.blogPostTranslation.findFirstOrThrow({
+      where: {
+        seo: post,
+        language: locale,
+      },
+      include: {
+        post: true,
+      },
+    }),
+    getTranslations("blog"),
+  ]);
 
   return {
     title: postTranslated.title,
-    description: "",
+    description: translate("writtenBy"),
     openGraph: {
       images: postTranslated.post.imageUrl as string,
     },

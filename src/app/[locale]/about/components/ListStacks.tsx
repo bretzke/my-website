@@ -20,10 +20,6 @@ export default function ListStacks() {
     {
       title: translate("skills.programmingLanguage"),
       skills: [
-        // {
-        //   name: "Node.js",
-        //   image: skillsLogo.node,
-        // },
         { name: "C#", image: skillsLogo.cSharp },
         { name: "PHP", image: skillsLogo.php },
         { name: "TypeScript", image: skillsLogo.typescript },

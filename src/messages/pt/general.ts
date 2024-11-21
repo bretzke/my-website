@@ -20,6 +20,7 @@ export default {
   },
   blog: {
     publishedIn: "Publicado em",
+    writtenBy: "Artigo escrito por: Willian Bretzke",
   },
   pinned: "Fixado",
   metadata: {
