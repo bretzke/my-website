@@ -46,10 +46,17 @@ export async function generateMetadata({
       seo: post,
       language: locale,
     },
+    include: {
+      post: true,
+    },
   });
 
   return {
     title: postTranslated.title,
+    description: "",
+    openGraph: {
+      images: postTranslated.post.imageUrl as string,
+    },
   };
 }
 
