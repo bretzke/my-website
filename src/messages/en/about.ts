@@ -1,10 +1,21 @@
 export default {
   experiences: {
     title: "Experiences",
+    iob: {
+      company: "Grupo IOB",
+      startDate: "January 2025",
+      endDate: "PRESENT",
+      roles: {
+        devSenior: {
+          title: "Senior Full Stack Developer",
+          description: "",
+        },
+      },
+    },
     blip: {
       company: "Blip",
       startDate: "December 2021",
-      endDate: "PRESENT",
+      endDate: "December 2024",
       roles: {
         senior: {
           title: "Senior Software Engineer",

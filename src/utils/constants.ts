@@ -1,6 +1,7 @@
 export const defaultAvatarImage = "/images/default-avatar.png";
 
 export const companiesLogo = {
+  iob: "/images/companies/iob.jpeg",
   blip: "/images/companies/blip.png",
   adsomos: "/images/companies/adsomos.jpeg",
   litoralcar: "/images/companies/litoralcar.webp",

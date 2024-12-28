@@ -1,27 +1,38 @@
 export default {
   experiences: {
     title: "Experiências",
+    iob: {
+      company: "Grupo IOB",
+      startDate: "Janeiro 2025",
+      endDate: "ATUALMENTE",
+      roles: {
+        devSenior: {
+          title: "Desenvolvedor Full Stack Sênior",
+          description: "",
+        },
+      },
+    },
     blip: {
       company: "Blip",
       startDate: "Dezembro 2021",
-      endDate: "PRESENTE",
+      endDate: "Dezembro 2024",
       roles: {
         senior: {
-          title: "Engenheiro de software sênior",
+          title: "Engenheiro de Software Sênior",
           startDate: "Janeiro 2024",
-          endDate: "PRESENTE",
+          endDate: "Dezembro 2024",
           description:
             "<list><item>Conduzi otimizações significativas no micro front-end, resultando em melhorias no carregamento da aplicação de 20 segundos para 3 segundos;</item><item>Liderei e participei ativamente da evolução contínua do produto;</item><item>Realizei revisões de código detalhadas para garantir a qualidade e o desempenho do sistema;</item><item>Entreguei demandas com alto padrão de qualidade dentro dos prazos estabelecidos.</item></list>",
         },
         midLevel: {
-          title: "Engenheiro de software pleno",
+          title: "Engenheiro de Software Pleno",
           startDate: "Setembro 2022",
           endDate: "Dezembro 2023",
           description:
             "<list><item>Realizei melhorias contínuas em uma aplicação que já processava mais de 50 milhões de operações de leitura e escrita no banco de dados por hora;</item><item>Utilizei Redis para melhorar a performance da aplicação;</item><item>Utilizei Grafana para observabilidade e monitoramento da aplicação back-end;</item><item>Realizei testes de carga para validar melhorias de uma release para outra.</item></list>",
         },
         chatbot: {
-          title: "Desenvolvedor de chatbot",
+          title: "Desenvolvedor de Chatbot",
           startDate: "Dezembro 2021",
           endDate: "Agosto 2022",
           description:
@@ -47,7 +58,7 @@ export default {
       endDate: "Janeiro 2021",
       roles: {
         web: {
-          title: "Desenvolvedor web",
+          title: "Desenvolvedor Web",
           description:
             "<list><item>Desenvolvi sites responsivos com Bootstrap;</item><item>Realizei entregas sobre demandas dos clientes dentro do prazo estipulado;</item><item>Dei manutenção a sites legados com versões anteriores ao HTML 5.</item></list>",
         },

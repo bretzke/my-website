@@ -23,6 +23,18 @@ export default function About({ params: { locale } }: StaticPageProps) {
 
   const experiences = [
     {
+      company: translate("experiences.iob.company"),
+      logo: companiesLogo.iob,
+      startDate: translate("experiences.iob.startDate"),
+      endDate: translate("experiences.iob.endDate"),
+      roles: [
+        {
+          title: translate("experiences.iob.roles.devSenior.title"),
+          description: translate("experiences.iob.roles.devSenior.description"),
+        },
+      ],
+    },
+    {
       company: translate("experiences.blip.company"),
       logo: companiesLogo.blip,
       startDate: translate("experiences.blip.startDate"),
