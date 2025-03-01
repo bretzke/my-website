@@ -11,8 +11,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { supportedLocales } from "@/i18n";
 import GoogleAnalytics from "@/lib/GoogleAnalytics";
 import { getTranslations } from "next-intl/server";
-import { myUserInfo, StaticPageProps } from "@/utils/constants";
-import { Metadata } from "next";
+import { myUserInfo, type StaticPageProps } from "@/utils/constants";
+import type { Metadata } from "next";
 
 const fontSans = FontSans({
   subsets: ["latin"],
