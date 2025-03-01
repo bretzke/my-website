@@ -67,7 +67,7 @@ export function TabsApp({ children }: TabsAppProps) {
 						>
 							<Button
 								variant="ghost"
-								className={`w-full ${
+								className={`w-full p-0 ${
 									selected ? "hover:bg-transparent" : "hover:bg-background"
 								}`}
 							>
