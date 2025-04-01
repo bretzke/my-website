@@ -31,7 +31,7 @@ const Optional = () => {
   const translate = useTranslations("feedbacks");
   return (
     <div className="flex gap-1 items-center">
-      <div className="h-1 w-1 rounded-full bg-foreground"></div>
+      <div className="h-1 w-1 rounded-full bg-foreground" />
       <small className="text-xs">{translate("optional")}</small>
     </div>
   );

@@ -152,7 +152,7 @@ export default function ListStacks() {
           </div>
         </div>
       ))}
-      <div className="flex"></div>
+      <div className="flex" />
     </>
   );
 }
