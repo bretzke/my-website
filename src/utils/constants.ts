@@ -1,25 +1,25 @@
-export const defaultAvatarImage = "/images/default-avatar.png";
+export const defaultAvatarImage = "/images/default-avatar.webp";
 
 export const companiesLogo = {
-  iob: "/images/companies/iob.jpeg",
-  blip: "/images/companies/blip.png",
-  adsomos: "/images/companies/adsomos.jpeg",
+  iob: "/images/companies/iob.webp",
+  blip: "/images/companies/blip.webp",
+  adsomos: "/images/companies/adsomos.webp",
   litoralcar: "/images/companies/litoralcar.webp",
-  fam: "/images/companies/fam.png",
+  fam: "/images/companies/fam.webp",
 };
 
 export const projectsInfo = {
   wbShop: {
-    logo: "/images/projects/wb-shop.png",
+    logo: "/images/projects/wb-shop.webp",
     repo: "https://github.com/bretzke/wb-shop",
     site: "https://wb-shop-seven.vercel.app/",
   },
   myWebsite: {
-    logo: "/images/projects/my-website.png",
+    logo: "/images/projects/my-website.webp",
     repo: "https://github.com/bretzke/my-website",
   },
   dictionary: {
-    logo: "/images/projects/dictionary.png",
+    logo: "/images/projects/dictionary.webp",
     repo: "https://github.com/bretzke/web-scraping-dictionary",
     site: "https://dicionario-pt-br-sigma.vercel.app/",
   },
@@ -31,7 +31,7 @@ export const apiPaths = {
 
 export const myUserInfo = {
   name: "Will",
-  avatarUrl: "/images/profile.jpg",
+  avatarUrl: "/images/profile.webp",
 };
 
 export const publishedDate = new Date("2024-09-23 12:00:00");
