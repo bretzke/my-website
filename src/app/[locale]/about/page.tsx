@@ -125,6 +125,24 @@ export default function About({ params: { locale } }: StaticPageProps) {
       </h1>
 
       <ExperiencePost
+        logo={companiesLogo.ftr}
+        company="Faculdade de Tecnologia Rocketseat"
+        startDate={translate("education.ftr.startDate")}
+        endDate={translate("education.ftr.endDate")}
+        roles={[
+          {
+            title: translate("education.ftr.course"),
+            description: translate.rich(
+              "education.ftr.description",
+              convertTextToHTML
+            ),
+            startDate: "",
+            endDate: "",
+          },
+        ]}
+      />
+
+      <ExperiencePost
         logo={companiesLogo.fam}
         company="Faculdade das Américas"
         startDate={translate("education.fam.startDate")}
