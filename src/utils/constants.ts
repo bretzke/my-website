@@ -6,6 +6,7 @@ export const companiesLogo = {
   adsomos: "/images/companies/adsomos.webp",
   litoralcar: "/images/companies/litoralcar.webp",
   fam: "/images/companies/fam.webp",
+  ftr: "/images/companies/ftr.webp",
 };
 
 export const projectsInfo = {

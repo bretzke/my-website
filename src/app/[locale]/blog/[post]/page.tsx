@@ -97,13 +97,13 @@ export default async function BlogPost({
         <div>
           <h1 className="text-2xl font-bold">{postData.title}</h1>
           <Breadcrumb>
-            <BreadcrumbList className="sm:gap-1">
+            <BreadcrumbList className="sm:gap-1 flex-nowrap">
               <BreadcrumbItem>
                 <BreadcrumbLink href={`/${locale}/blog`}>Blog</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage>{postData.title}</BreadcrumbPage>
+                <BreadcrumbPage className="line-clamp-1">{postData.title}</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
