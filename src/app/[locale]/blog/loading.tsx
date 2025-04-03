@@ -3,8 +3,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Loading() {
   return (
-    <section className="container-app flex">
-      {Array.from({ length: 1 }).map((_, index) => (
+    <section className="container-app flex max-sm:flex-col gap-4 max-sm:gap-8">
+      {Array.from({ length: 2 }).map((_, index) => (
         <Card className="max-sm:w-full w-2/4" key={index}>
           <CardHeader className="relative h-56 p-0">
             <Skeleton className="w-full h-56" />

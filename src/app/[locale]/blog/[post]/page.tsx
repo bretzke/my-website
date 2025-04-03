@@ -7,12 +7,16 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { myUserInfo, StaticPageProps } from "@/utils/constants";
+import { type StaticPageProps, myUserInfo } from "@/utils/constants";
 import { formatDate } from "@/utils/date";
 import prisma from "@/utils/db";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { vs2015 } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import rehypeRaw from "rehype-raw";
 
 export interface BlogPostParams {
   params: StaticPageProps["params"] & {
@@ -26,14 +30,14 @@ export async function generateStaticParams() {
   });
   const paths: BlogPostParams["params"][] = [];
 
-  posts.forEach((post) => {
-    post.PostTranslation.forEach((postTranslated) => {
+  for (const post of posts) {
+    for (const postTranslated of post.PostTranslation) {
       paths.push({
         locale: postTranslated.language,
         post: postTranslated.seo,
       });
-    });
-  });
+    }
+  }
 
   return paths;
 }
@@ -125,10 +129,30 @@ export default async function BlogPost({
           </div>
         </div>
 
-        <article
-          className="flex flex-col gap-4"
-          dangerouslySetInnerHTML={{ __html: postData.content }}
-        ></article>
+        <article className="blog-post">
+          <ReactMarkdown
+            rehypePlugins={[rehypeRaw]}
+            components={{
+              code: ({ children, ...props }) => {
+                const type = props.lang || "javascript";
+                const showLines = (props as any)['data-show-lines'] || 'true';
+                
+                return (
+                  <SyntaxHighlighter
+                    language={type}
+                    style={vs2015}
+                    showLineNumbers={showLines === 'true'}
+                    wrapLines
+                  >
+                    {`${String(children).replace(/\\n/g, "\n").replace(/\\t/g, "\t")}`}
+                  </SyntaxHighlighter>
+                );
+              },
+            }}
+          >
+            {postData.content}
+          </ReactMarkdown>
+        </article>
       </section>
     </div>
   );

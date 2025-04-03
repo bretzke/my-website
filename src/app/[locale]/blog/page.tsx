@@ -16,19 +16,24 @@ export default async function Blog({ params: { locale } }: StaticPageProps) {
     where: {
       language: locale,
     },
+    orderBy: {
+      post: {
+        createdAt: "desc"
+      }
+    }
   });
 
   const translate = await getTranslations("blog");
 
   return (
-    <section className="container-app flex">
+    <section className="container-app flex max-sm:flex-col gap-4 max-sm:gap-8">
       {posts.map((post) => (
         <Link
           href={`/${locale}/blog/${post.seo}`}
           key={post.id}
-          className="max-sm:w-full"
+          className="w-2/4 max-sm:w-full grow"
         >
-          <Card>
+          <Card className="h-full">
             <CardHeader className="relative h-56 p-0">
               <Image src={post.post.imageUrl as string} alt={post.title} fill />
             </CardHeader>
