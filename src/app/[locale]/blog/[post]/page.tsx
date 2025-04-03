@@ -129,19 +129,22 @@ export default async function BlogPost({
           </div>
         </div>
 
-        <article className="flex flex-col gap-4">
+        <article className="blog-post">
           <ReactMarkdown
             rehypePlugins={[rehypeRaw]}
             components={{
-              pre: ({ children }) => {
+              code: ({ children, ...props }) => {
+                const type = props.lang || "javascript";
+                const showLines = (props as any)['data-show-lines'] || 'true';
+                
                 return (
                   <SyntaxHighlighter
-                    language="javascript"
+                    language={type}
                     style={vs2015}
-                    showLineNumbers
+                    showLineNumbers={showLines === 'true'}
                     wrapLines
                   >
-                    {`${String(children).replace("\\n", "\n")}`}
+                    {`${String(children).replace(/\\n/g, "\n").replace(/\\t/g, "\t")}`}
                   </SyntaxHighlighter>
                 );
               },

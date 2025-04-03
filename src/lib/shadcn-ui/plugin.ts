@@ -40,7 +40,17 @@ export const shadcnPlugin = plugin(
         },
       },
 
-      article: {
+      'article.blog-post': {
+        display: 'flex',
+        'flex-direction': 'column',
+        gap: '1rem',
+
+        div: {
+          display: 'flex',
+          'flex-direction': 'column',
+          gap: '0.25rem',
+        },
+
         h1: {
           "font-size": "20px",
           "font-weight": "bold",
