@@ -3,7 +3,7 @@ export default {
     title: "Experiências",
     vellochat: {
       company: "Vellochat",
-      startDate: "Outubro 202",
+      startDate: "Outubro 2025",
       endDate: "ATUALMENTE",
       roles: {
         founder: {
@@ -92,7 +92,7 @@ export default {
         "Pós-graduação - Especialização em desenvolvimento full stack e inteligência artificial",
       description:
         "<list><item>Design Patterns;</item><item>Arquitetura de software;</item><item>Microsserviços;</item><item>Docker & Docker Compose;</item><item>CI/CD com GitHub Actions;</item><item>Observabilidade (Prometheus/Grafana);</item><item>Inteligência Artificial e Modelos de Linguagem;</item><item>Chatbots;</item><item>Fine-tuning;</item><item>Outros.</item></list>",
-      startDate: "Janeiro 2025",
+      startDate: "Maio 2025",
       endDate: "ATUALMENTE",
     },
   },

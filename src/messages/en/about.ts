@@ -92,7 +92,7 @@ export default {
         "Postgraduate Degree – Specialization in Full Stack Development and Artificial Intelligence",
       description:
         "<list><item>Design Patterns;</item><item>Software Architecture;</item><item>Microservices;</item><item>Docker & Docker Compose;</item><item>CI/CD with GitHub Actions;</item><item>Observability (Prometheus/Grafana);</item><item>Artificial Intelligence and Language Models;</item><item>Chatbots;</item><item>Fine-tuning;</item><item>Others.</item></list>",
-      startDate: "January 2025",
+      startDate: "May 2025",
       endDate: "PRESENT",
     },
   },
