@@ -1,14 +1,38 @@
 export default {
   experiences: {
     title: "Experiences",
+    unifique: {
+      company: "Unifique",
+      startDate: "April 2026",
+      endDate: "PRESENT",
+      roles: {
+        softwareEngineer: {
+          title: "Software Engineer",
+          description: "",
+        },
+      },
+    },
+    vellochat: {
+      company: "Vellochat",
+      startDate: "October 2025",
+      endDate: "PRESENT",
+      roles: {
+        founder: {
+          title: "Founder",
+          description:
+            "As the founder of VelloChat, I lead both the technical architecture and the Go-to-Market strategy of the platform, focusing on scalability and automation via the Official WhatsApp Business API (Meta).<br></br><br></br><h3>Business & Sales Strategy:</h3><list><item>SaaS Business Model: Structured a recurring revenue (subscription-based) model designed to solve the pain points of companies seeking professionalized customer service without relying on unstable third-party solutions.</item><item>Sales & Customer Success: Leading active prospecting and closing new accounts by identifying operational bottlenecks and delivering tailor-made automation solutions.</item></list><br></br><h3>Engineering & Product:</h3><list><item>Multi-tenant Architecture: Developed a scalable platform from scratch to support multiple organizations with complete data isolation and security.</item><item>Intelligent Flow Engine: Built a context management system that enables complex automations, including custom variables, script execution, and real-time HTTP requests.</item><item>High Availability: Implemented an event-driven asynchronous processing system using Node.js and RabbitMQ, ensuring resilience while handling thousands of concurrent messages.</item></list>",
+        },
+      },
+    },
     iob: {
       company: "Grupo IOB",
       startDate: "January 2025",
-      endDate: "PRESENT",
+      endDate: "December 2025",
       roles: {
         devSenior: {
           title: "Senior Full Stack Developer",
-          description: "",
+          description:
+            "<list><item>Maintained and evolved a critical worker application responsible for processing all fiscal documents on the platform, sourcing data asynchronously from AWS SQS queues;</item><item>Maintained and optimized flows that persisted unstructured fiscal invoice metadata to MongoDB, ensuring the integrity and high performance of the NoSQL data layer;</item><item>Provided maintenance for the document management application leveraging AWS S3 to handle the complete file lifecycle, ensuring optimized upload and secure storage.</item></list>",
         },
       },
     },
@@ -75,10 +99,11 @@ export default {
       endDate: "June 2024",
     },
     ftr: {
-      course: "Postgraduate Degree – Specialization in Full Stack Development and Artificial Intelligence",
+      course:
+        "Postgraduate Degree – Specialization in Full Stack Development and Artificial Intelligence",
       description:
         "<list><item>Design Patterns;</item><item>Software Architecture;</item><item>Microservices;</item><item>Docker & Docker Compose;</item><item>CI/CD with GitHub Actions;</item><item>Observability (Prometheus/Grafana);</item><item>Artificial Intelligence and Language Models;</item><item>Chatbots;</item><item>Fine-tuning;</item><item>Others.</item></list>",
-      startDate: "January 2025",
+      startDate: "May 2025",
       endDate: "PRESENT",
     },
   },

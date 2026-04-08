@@ -19,9 +19,38 @@ export default function About({ params: { locale } }: StaticPageProps) {
       <ul className="list-inside list-disc">{chunks}</ul>
     ),
     br: () => <br />,
+    h3: (chunks: ReactNode) => (
+      <h3 className="font-semibold text-md">{chunks}</h3>
+    ),
   };
 
   const experiences = [
+    {
+      company: translate("experiences.unifique.company"),
+      logo: companiesLogo.unifique,
+      startDate: translate("experiences.unifique.startDate"),
+      endDate: translate("experiences.unifique.endDate"),
+      roles: [
+        {
+          title: translate("experiences.unifique.roles.softwareEngineer.title"),
+        },
+      ],
+    },
+    {
+      company: translate("experiences.vellochat.company"),
+      logo: companiesLogo.vellochat,
+      startDate: translate("experiences.vellochat.startDate"),
+      endDate: translate("experiences.vellochat.endDate"),
+      roles: [
+        {
+          title: translate("experiences.vellochat.roles.founder.title"),
+          description: translate.rich(
+            "experiences.vellochat.roles.founder.description",
+            convertTextToHTML,
+          ),
+        },
+      ],
+    },
     {
       company: translate("experiences.iob.company"),
       logo: companiesLogo.iob,
@@ -30,7 +59,10 @@ export default function About({ params: { locale } }: StaticPageProps) {
       roles: [
         {
           title: translate("experiences.iob.roles.devSenior.title"),
-          description: translate("experiences.iob.roles.devSenior.description"),
+          description: translate.rich(
+            "experiences.iob.roles.devSenior.description",
+            convertTextToHTML,
+          ),
         },
       ],
     },
@@ -46,7 +78,7 @@ export default function About({ params: { locale } }: StaticPageProps) {
           endDate: translate("experiences.blip.roles.senior.endDate"),
           description: translate.rich(
             "experiences.blip.roles.senior.description",
-            convertTextToHTML
+            convertTextToHTML,
           ),
         },
         {
@@ -55,7 +87,7 @@ export default function About({ params: { locale } }: StaticPageProps) {
           endDate: translate("experiences.blip.roles.midLevel.endDate"),
           description: translate.rich(
             "experiences.blip.roles.midLevel.description",
-            convertTextToHTML
+            convertTextToHTML,
           ),
         },
         {
@@ -64,7 +96,7 @@ export default function About({ params: { locale } }: StaticPageProps) {
           endDate: translate("experiences.blip.roles.chatbot.endDate"),
           description: translate.rich(
             "experiences.blip.roles.chatbot.description",
-            convertTextToHTML
+            convertTextToHTML,
           ),
         },
       ],
@@ -81,7 +113,7 @@ export default function About({ params: { locale } }: StaticPageProps) {
           endDate: "",
           description: translate.rich(
             "experiences.adsomos.roles.backend.description",
-            convertTextToHTML
+            convertTextToHTML,
           ),
         },
       ],
@@ -98,7 +130,7 @@ export default function About({ params: { locale } }: StaticPageProps) {
           endDate: "",
           description: translate.rich(
             "experiences.litoralcar.roles.web.description",
-            convertTextToHTML
+            convertTextToHTML,
           ),
         },
       ],
@@ -134,7 +166,7 @@ export default function About({ params: { locale } }: StaticPageProps) {
             title: translate("education.ftr.course"),
             description: translate.rich(
               "education.ftr.description",
-              convertTextToHTML
+              convertTextToHTML,
             ),
             startDate: "",
             endDate: "",
@@ -152,7 +184,7 @@ export default function About({ params: { locale } }: StaticPageProps) {
             title: translate("education.fam.course"),
             description: translate.rich(
               "education.fam.description",
-              convertTextToHTML
+              convertTextToHTML,
             ),
             startDate: "",
             endDate: "",
