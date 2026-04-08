@@ -7,6 +7,7 @@ export const companiesLogo = {
   litoralcar: "/images/companies/litoralcar.webp",
   fam: "/images/companies/fam.webp",
   ftr: "/images/companies/ftr.webp",
+  vellochat: "/images/companies/vellochat.webp",
 };
 
 export const projectsInfo = {

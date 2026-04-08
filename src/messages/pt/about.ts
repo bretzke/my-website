@@ -1,14 +1,27 @@
 export default {
   experiences: {
     title: "Experiências",
+    vellochat: {
+      company: "Vellochat",
+      startDate: "Outubro 202",
+      endDate: "ATUALMENTE",
+      roles: {
+        founder: {
+          title: "Fundador",
+          description:
+            "Como fundador da Vellochat, lidero tanto a arquitetura técnica quanto a estratégia de Go-to-Market da plataforma, focando em escalabilidade e automação via a API Oficial do WhatsApp Business (Meta).<br></br><br></br><h3>Estratégia de Negócios e Vendas:</h3><list><item>Modelo de Negócios SaaS: Estruturei um modelo de receita recorrente (baseado em assinatura) projetado para resolver os pontos de dor das empresas que buscam um atendimento ao cliente profissionalizado sem depender de soluções de terceiros instáveis.</item><item>Vendas e Sucesso do Cliente: Dirigi o prospecting ativo e a fechamento de novos contratos, identificando gargalos operacionais e entregando soluções de automação personalizadas.</item></list><br></br><h3>Engenharia e Produto:</h3><list><item>Arquitetura Multitenant: Desenvolvi uma plataforma escalável desde o zero para suportar múltiplas organizações com isolamento total de dados e segurança.</item><item>Motor de Fluxo Inteligente: Criei um sistema de gerenciamento de contexto que permite automações complexas, incluindo variáveis personalizadas, execução de scripts e requisições HTTP em tempo real.</item><item>Alta Disponibilidade: Implementei um sistema de processamento assíncrono baseado em eventos usando Node.js e RabbitMQ, garantindo resiliência ao lidar com milhares de mensagens concorrentes.</item></list>",
+        },
+      },
+    },
     iob: {
       company: "Grupo IOB",
       startDate: "Janeiro 2025",
-      endDate: "ATUALMENTE",
+      endDate: "Dezembro 2025",
       roles: {
         devSenior: {
           title: "Desenvolvedor Full Stack Sênior",
-          description: "",
+          description:
+            "<list><item>Mantive e evoluí uma aplicação worker crítica responsável pelo processamento de todos os documentos fiscais da plataforma, consumindo dados de forma assíncrona a partir de filas AWS SQS;</item><item>Mantive e otimizei fluxos que persistiam metadados não estruturados de notas fiscais no MongoDB, garantindo a integridade e a alta performance da camada de dados NoSQL;</item><item>Realizei a manutenção da aplicação de gerenciamento de documentos, utilizando AWS S3 para lidar com o ciclo de vida completo dos arquivos, garantindo upload otimizado e armazenamento seguro.</item></list>",
         },
       },
     },
@@ -75,7 +88,8 @@ export default {
       endDate: "Junho 2024",
     },
     ftr: {
-      course: "Pós-graduação - Especialização em desenvolvimento full stack e inteligência artificial",
+      course:
+        "Pós-graduação - Especialização em desenvolvimento full stack e inteligência artificial",
       description:
         "<list><item>Design Patterns;</item><item>Arquitetura de software;</item><item>Microsserviços;</item><item>Docker & Docker Compose;</item><item>CI/CD com GitHub Actions;</item><item>Observabilidade (Prometheus/Grafana);</item><item>Inteligência Artificial e Modelos de Linguagem;</item><item>Chatbots;</item><item>Fine-tuning;</item><item>Outros.</item></list>",
       startDate: "Janeiro 2025",
