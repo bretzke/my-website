@@ -1,6 +1,16 @@
 export default {
   experiences: {
     title: "Experiências",
+    unifique: {
+      company: "Unifique",
+      startDate: "Abril 2026",
+      endDate: "ATUALMENTE",
+      roles: {
+        softwareEngineer: {
+          title: "Engenheiro de Software",
+        },
+      },
+    },
     vellochat: {
       company: "Vellochat",
       startDate: "Outubro 2025",

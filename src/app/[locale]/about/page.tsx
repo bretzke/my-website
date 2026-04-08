@@ -26,6 +26,17 @@ export default function About({ params: { locale } }: StaticPageProps) {
 
   const experiences = [
     {
+      company: translate("experiences.unifique.company"),
+      logo: companiesLogo.unifique,
+      startDate: translate("experiences.unifique.startDate"),
+      endDate: translate("experiences.unifique.endDate"),
+      roles: [
+        {
+          title: translate("experiences.unifique.roles.softwareEngineer.title"),
+        },
+      ],
+    },
+    {
       company: translate("experiences.vellochat.company"),
       logo: companiesLogo.vellochat,
       startDate: translate("experiences.vellochat.startDate"),
