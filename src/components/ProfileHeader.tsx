@@ -45,9 +45,6 @@ export default function ProfileHeader() {
                     .typeString("Welcome to my hello")
                     .pauseFor(200)
                     .deleteChars(5)
-                    .typeString("(oops, my mistake)")
-                    .pauseFor(200)
-                    .deleteChars(18)
                     .typeString("world!")
                     .start();
                   return;
@@ -57,9 +54,6 @@ export default function ProfileHeader() {
                   .typeString("Bem-vindo(a) ao meu olá ")
                   .pauseFor(200)
                   .deleteChars(4)
-                  .typeString("(ops, errei)")
-                  .pauseFor(200)
-                  .deleteChars(12)
                   .typeString("mundo!")
                   .start();
               }}
